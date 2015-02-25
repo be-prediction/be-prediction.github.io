@@ -1,0 +1,98 @@
+.icecreambox {
+    margin: auto;
+    border-top: 99px solid gray;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    height: 0;
+    width: 99px;
+}
+.mark {
+    height: 2px;
+    background-color: white;
+    position: relative;
+    top: -0px;
+    left: -0 px;
+    width: 100px
+}
+
+
+input[disabled] {
+    border: 0;
+    width: 100% !important;
+}
+
+.open{
+    background-color: white;
+    padding: 0;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+}
+
+
+input{
+    width: 75px !important;
+    padding: 0 0 0 5px;
+    margin: 0 0 0 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn{
+    height: 25px;
+    padding: 2px 10px;
+}
+
+.input-group{
+    width: 150px;   
+}
+
+/* Table row spacing for calculator */
+tr.spaceOver > td
+{
+    padding-top: 1em;
+}
+
+tr.spaceMedOver > td
+{
+    padding-top: 0.6em;
+}
+
+tr.spaceSmOver > td
+{
+    padding-top: 0.2em;
+}
+
+/* Jumbotron fixes for small jumbotron page head */
+.smalljumbo{
+    font-size:41px !important;
+}
+
+.jumbotron .col-md-6{
+    padding-left: 0px !important;
+}
+
+/* Countdown styling */
+.counter{
+    margin: auto;
+}
+.counter h3{
+    float: left;
+    margin: 0;
+}
+
+#countdown {
+    display: inline-block;
+    margin: 0;
+    padding-left: 20px;
+}
+
+#countdown span {
+    font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    margin-right: 20px;
+}
