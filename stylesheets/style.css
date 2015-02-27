@@ -61,3 +61,8 @@ body {
     font-weight: bold;
     margin: 22px 0 6px 0;
 }
+
+/* Profile styling */
+.profile{
+    margin-bottom: 22px;
+}
