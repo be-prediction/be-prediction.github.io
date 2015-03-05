@@ -70,22 +70,23 @@
                     <form id="transaction">
                         <p>Type of transaction:<br>
                             <select type="multiple" id="type">
-                                <option value="invest" selected="selected">Invest points</option>
-                                <option value="sell">Sell invested points</option>
+                                <option value="invest" selected="selected">Invest tokens</option>
+                                <option value="sell">Sell invested tokens</option>
                             </select>
                         </p>
                     </form>
                     <table id="invest">
                         <tr class="autoWidth">
-                            <td>Current market score for Yes:</td>
+                            <td>Current position score:</td>
                             <td>
-                                <div class="input-group-sm">
-                                    <input id="sc" class="form-control maxInput" type="number" min="0" max ="1" step="0.1" value="0.5">
+                                <div class="input-group input-group-sm">
+                                    <input id="sc" class="form-control maxInput" type="number" min="0" max ="100" step="0.1" value="50" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2">%</span>
                                 </div>
-                            </td> 
+                            </td>
                         </tr>
                         <tr class="autoWidth spaceSmOver">
-                            <td>Point investment:</td>
+                            <td>Token investment:</td>
                             <td>
                                 <div class="input-group-sm">
                                     <input id="i" class="form-control maxInput"  type="number" min="0" value="0">
@@ -97,13 +98,14 @@
                         <tr class="autoWidth">
                             <td>Score at investment:</td>
                             <td>
-                                <div class="input-group-sm">
-                                    <input id="s_sc1" type="number" min="0" max ="1" step="0.1" value="0.5" class="maxInput form-control">
+                                <div class="input-group input-group-sm">
+                                    <input id="s_sc1" type="number" min="0" max ="100" step="1" value="50" class="maxInput form-control">
+                                    <span class="input-group-addon" id="basic-addon2">%</span>
                                 </div>
-                            </td> 
+                            </td>
                         </tr>
                         <tr class="autoWidth spaceSmOver">
-                            <td>Initial point investment:</td>
+                            <td>Initial token investment:</td>
                             <td>
                                 <div class="input-group-sm">
                                     <input id="s_i" type="number" class="maxInput form-control" min="0" value="0" onkeyup="sell()">
@@ -113,22 +115,26 @@
                         <tr class="spaceMedOver autoWidth">
                             <td>Shares held:</td>
                             <td>
-                                <input id="s_sh" type="number" value="0" disabled="disabled"></td>
+                                <div class="calc-output"><span id="s_sh">0</span></div>
+                            </td>
                         </tr>
                         <tr class="spaceMedOver autoWidth">
-                            <td>Current market score:</td>
+                            <td>Current position score:</td>
                             <td>
-                                <div class="input-group-sm">
-                                    <input id="s_sc2" type="number" min="0" max ="1" step="0.1" value="0.5" class="maxInput form-control">
+                                <div class="input-group input-group-sm">
+                                    <input id="s_sc2" type="number" min="0" max ="100" step="1" value="50" class="maxInput form-control">
+                                    <span class="input-group-addon" id="basic-addon2">%</span>
                                 </div>
                             </td> 
                         </tr>
                         <tr class="spaceMedOver autoWidth">
                             <td>Share worth:</td>
-                            <td><input id="s_sw" type="number" value="0" disabled="disabled"></td>
+                            <td>
+                                <div class="calc-output"><span id="s_sw">0</span></div>
+                            </td>
                         </tr>
                         <tr class="spaceMedOver autoWidth">
-                            <td>Points sold:</td>
+                            <td>Tokens sold:</td>
                             <td>
                                 <div class="input-group-sm">
                                     <input id="s_ps" class="maxInput form-control" type="number" min="0" max ="0" step="1" value="0">
@@ -137,94 +143,109 @@
                         </tr>
                     </table>
                 </div>
+
                 <div class="col-md-4 col-sm-6">
                     <h4>Result</h4>
                     <table>                
                         <tr>
                             <td colspan="2">
-                                <h5>Market Yes-prices: <span class="open" onclick="openInfo('#priceinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                                <h5>Position score: <span class="open" onclick="openInfo('#priceinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
                                 <div id="priceinfo" class="alert alert-info alert-dismissible" style="display:none" role="alert">
                                     <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <strong>The price</strong> is given by:
-                                    $$p(S)=k{\e^{S\/b}}/{\e^{S\/b}+\e^{-S\/b}}$$
-                                    where $S$ is the net sales in the market.
+                                    <strong>The score</strong> is given by:
+                                    $$p(S)=100·{\e^{S\/b}}/{\e^{S\/b}+1}$$
+                                    where $S$ are the net position sales.
                                 </div>
                             </td>
                         </tr>              
                         <tr class="autoWidth">
                             <td>Before <span class="trTypeT">investment</span>:</td>
-                            <td><input id="p1" value="0.5" disabled="disabled"></td> 
+                            <td>
+                                    <div class="calc-output"><span id="p1">50</span> %</div>
+                            </td>
                         </tr>
                         <tr class="autoWidth">
                             <td>After <span class="trTypeT">investment</span>:</td>
-                            <td><input id="p2" value="0.5" disabled="disabled"></td>
+                            <td>
+                                <div class="calc-output"><span id="p2">50</span> %</div>
+                            </td>
                         </tr>
                         <tr class="spaceOver">
                             <td colspan="2">
-                                <h5>Net market sales: <span class="open" onclick="openInfo('#salesinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                                <h5>Net position sales: <span class="open" onclick="openInfo('#salesinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
                                 <div id="salesinfo" class="alert alert-info alert-dismissible" style="display:none" role="alert">
                                     <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <strong>The net market sales</strong> are defined as shares invested in the market, net shares invest in the other market. They can be solved for by using the market price $p$:
-                                    $$S(p)=1/2b\l\n({p\/k}/{1-p\/k}).$$
+                                    <strong>The net position sales</strong> are defined as shares invested in the position, net shares invested in the other position. They can be solved for by using the position score $p$:
+                                    $$S(p)=b·\l\n({p\/100}/{1-p\/100}).$$
                                 </div>
                             </td>
                         </xxtr>              
                     <tr class="autoWidth">
                         <td>Before <span class="trTypeT">investment</span>:</td>
-                        <td><input id="s1" value="0" disabled="disabled"></td> 
+                        <td>
+                            <div class="calc-output"><span id="s1">0</span></div>
                     </tr>
                     <tr class="autoWidth">
                         <td>After <span class="trTypeT">investment</span>:</td>
-                        <td><input id="s2" value="0" disabled="disabled"></td>
+                        <td>
+                            <div class="calc-output"><span id="s2">0</span></div>
                     </tr>
                     <tr class="spaceOver">
                         <td colspan="2">
                             <h5><span id="impact">Investment</span> impact: <span class="open" onclick="openInfo('#investInfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
                             <div id="investInfo" class="alert alert-info alert-dismissible" style="display:none" role="alert">
                                 <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <strong>The shares <span class="trTypeD">purchased</span></strong> for a given <span class="trTypeT">investment</span> are calculated by integrating the price between current net sales in the market to the final net sales after the <span class="trTypeT">purchase</span>. The value of this must be equal to the points <span class="trTypeD">invested</span>:
-                                $$∫_{S_1}^{S_2}p(S)ds=I.$$
+                                <strong>The shares <span class="trTypeD">purchased</span></strong> for a given <span class="trTypeT">investment</span> are calculated by integrating the price between current net sales in the position and the final net sales after the <span class="trTypeT">purchase</span>. The value of this must be equal to the tokens <span class="trTypeD">invested</span>:
+                                $$∫_{S_1}^{S_2}p(S)\d s=I.$$
                                 This is easily solved for $S_2$ and the shares <span class="trTypeD">purchased</span> are $s=S_2-S_1$.
                                 <br>
-                                <strong>The balance change</strong> is the negative of the points <span class="trTypeID">invested</span>.
+                                <strong>The balance change</strong> is the negative of the tokens <span class="trTypeID">invested</span>.
                                 <br>
-                                <strong>The price change</strong> is simply calculated by $p(S_1)-p(S_2)$.
+                                <strong>The score change</strong> is simply calculated by $p(S_1)-p(S_2)$.
                                 <br>
-                                <strong>The average price</strong> per share is calculated by $I\/s$.
+                                <strong>The average score</strong> per share is calculated by $I\/s$.
                             </div>
                         </td>
                     </tr>              
                     <tr class="autoWidth">
                         <td>Shares <span class="trTypeD">purchased</span>:</td>
-                        <td><input id="s" value="0" disabled="disabled"></td>
+                        <td>
+                            <div class="calc-output"><span id="s">0</span></div>
+                        </td>
                     </tr>
                     <tr class="autoWidth">
                         <td>Balance change:</td>
-                        <td><input id="pc" value="0" disabled="disabled"></td>
+                        <td>
+                            <div class="calc-output"><span id="pc">0</span></div>
+                        </td>
                     </tr>
                     <tr class="autoWidth">
-                        <td>Price change:</td>
-                        <td><input id="p" value="0" disabled="disabled"></td>
+                        <td>Score change:</td>
+                        <td>
+                            <div class="calc-output"><span id="p">0</span> (pp)</div>
+                        </td>
                     </tr>
                     <tr class="autoWidth">
-                        <td>Average price:</td>
-                        <td><input id="avgp" value="0" disabled="disabled"></td>
+                        <td>Average score:</td>
+                        <td>
+                            <div class="calc-output"><span id="avgp">0</span> %</div>
+                        </td>
                     </tr>
                     </table>
             </div>
             <div class="col-md-4 col-sm-12">
                 <h3>About</h3>
-                <p>This &ldquo;calculator&rdquo; allows you to try see how investing or selling points at different market situations affects your balance and the market itself.</p>
-                <p>All calculations are for a market maker based on a logarithmic scoring rule. In the actual markets we will use parameters $b=200$ and $k=100$.</p>
+                <p>This &ldquo;calculator&rdquo; allows you to try see how investing or selling tokens at different market situations affects your balance and the market itself. Remember that you start out with 100 tokens.</p>
+                <p>All calculations are for a market maker based on a logarithmic scoring rule. In the actual markets we use parameters $b=200$ and $k=1$.</p>
                 <h5>Parameters</h5>
                 <table>             
                     <tr class="autoWidth">
-                        <td>Point value of a share, $k$:</td>
+                        <td>Token value of a share, $k$:</td>
                         <td>
                             <div class="input-group-sm">
-                                <input id="k" type="number" class="form-control input" min="0" step="1" value="100">
-                            </div>
-                        </td> 
+                                <input id="k" type="number" class="form-control input" min="0" step="1" value="1">
+                                       </div>
+                                </td> 
                     </tr>
                     <tr class="autoWidth spaceSmOver">
                         <td>Liquidity parameter, $b$:</td>
@@ -239,10 +260,10 @@
         </div>
         <hr>
 
-            <footer>
-                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
-    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
-            </footer>
+        <footer>
+            <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+        </footer>
         </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript -->

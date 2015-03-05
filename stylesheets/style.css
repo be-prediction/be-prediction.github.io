@@ -10,11 +10,6 @@ body {
   }
 }
 
-.autoWidth td:first-child{
-    white-space: nowrap;
-    width: 1px;
-}
-
 /* Change when navbar collapses */
 @media (max-width: 991px) {
     .navbar-header {

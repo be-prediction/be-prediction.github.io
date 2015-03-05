@@ -15,10 +15,22 @@
     width: 100px
 }
 
+.calc-output{
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 
 input[disabled] {
     border: 0;
-    width: 100% !important;
+    font-size: 14px;
+    width: 50px !important;
+    
+}
+
+.disabled-addon{
+    background-color: white;
+    border: 0;
 }
 
 .open{
@@ -48,6 +60,16 @@ input{
 
 .input-group{
     width: 150px;   
+}
+
+.input-group-addon{
+    float: left;
+    width: 30px;
+}
+
+.autoWidth td:first-child{
+    white-space: nowrap;
+    width: 1px;
 }
 
 /* Table row spacing for calculator */
