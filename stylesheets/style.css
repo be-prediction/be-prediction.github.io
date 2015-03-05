@@ -66,6 +66,13 @@ body {
     margin-bottom: 22px;
 }
 
+/* Instruction / details styling */
+.text-block h5{
+    margin-top: 16px;
+    margin-bottom: 7px;
+}
+
+
 /* Infobox styling */
 .infobox{
     padding-bottom: 5px;
@@ -78,4 +85,9 @@ body {
 
 .ingress{
     font-size: 15px;
+}
+
+.infobox h6{
+    margin-top: 7px;
+    margin-bottom: 7px; 
 }
