@@ -77,7 +77,7 @@
                     </form>
                     <table id="invest">
                         <tr class="autoWidth">
-                            <td>Current position score:</td>
+                            <td>Current asset score:</td>
                             <td>
                                 <div class="input-group input-group-sm">
                                     <input id="sc" class="form-control maxInput" type="number" min="0" max ="100" step="0.1" value="50" aria-describedby="basic-addon2">
@@ -149,12 +149,12 @@
                     <table>                
                         <tr>
                             <td colspan="2">
-                                <h5>Position score: <span class="open" onclick="openInfo('#priceinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
-                                <div id="priceinfo" class="alert alert-info alert-dismissible" style="display:none" role="alert">
+                                <h5>Asset score: <span class="open" onclick="openInfo('#priceinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                                <div id="priceinfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
                                     <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <strong>The score</strong> is given by:
+                                    <strong class="ingress">The score</strong> is given by:
                                     $$p(S)=100·{\e^{S\/b}}/{\e^{S\/b}+1}$$
-                                    where $S$ are the net position sales.
+                                    where $S$ are the net asset sales.
                                 </div>
                             </td>
                         </tr>              
@@ -172,10 +172,10 @@
                         </tr>
                         <tr class="spaceOver">
                             <td colspan="2">
-                                <h5>Net position sales: <span class="open" onclick="openInfo('#salesinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
-                                <div id="salesinfo" class="alert alert-info alert-dismissible" style="display:none" role="alert">
+                                <h5>Net asset sales: <span class="open" onclick="openInfo('#salesinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                                <div id="salesinfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
                                     <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <strong>The net position sales</strong> are defined as shares invested in the position, net shares invested in the other position. They can be solved for by using the position score $p$:
+                                    <strong class="ingress">The net asset sales</strong> are defined as shares invested in the asset, net shares invested in the other asset. They can be solved for by using the asset score $p$:
                                     $$S(p)=b·\l\n({p\/100}/{1-p\/100}).$$
                                 </div>
                             </td>
@@ -193,17 +193,17 @@
                     <tr class="spaceOver">
                         <td colspan="2">
                             <h5><span id="impact">Investment</span> impact: <span class="open" onclick="openInfo('#investInfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
-                            <div id="investInfo" class="alert alert-info alert-dismissible" style="display:none" role="alert">
+                            <div id="investInfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
                                 <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <strong>The shares <span class="trTypeD">purchased</span></strong> for a given <span class="trTypeT">investment</span> are calculated by integrating the price between current net sales in the position and the final net sales after the <span class="trTypeT">purchase</span>. The value of this must be equal to the tokens <span class="trTypeD">invested</span>:
+                                <strong class="ingress">The shares <span class="trTypeD">purchased</span></strong> for a given <span class="trTypeT">investment</span> are calculated by integrating the price between current net sales in the asset and the final net sales after the <span class="trTypeT">purchase</span>. The value of this must be equal to the tokens <span class="trTypeD">invested</span>:
                                 $$∫_{S_1}^{S_2}p(S)\d s=I.$$
                                 This is easily solved for $S_2$ and the shares <span class="trTypeD">purchased</span> are $s=S_2-S_1$.
                                 <br>
-                                <strong>The balance change</strong> is the negative of the tokens <span class="trTypeID">invested</span>.
+                                <strong class="ingress">The balance change</strong> is the negative of the tokens <span class="trTypeID">invested</span>.
                                 <br>
-                                <strong>The score change</strong> is simply calculated by $p(S_1)-p(S_2)$.
+                                <strong class="ingress">The score change</strong> is simply calculated by $p(S_1)-p(S_2)$.
                                 <br>
-                                <strong>The average score</strong> per share is calculated by $I\/s$.
+                                <strong class="ingress">The average score</strong> per share is calculated by $I\/s$.
                             </div>
                         </td>
                     </tr>              
@@ -274,6 +274,7 @@
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="/js/ie10-viewport-bug-workaround.js"></script>
         <script type="text/javascript" src="/js/convert.js"></script>
+        <script type="text/javascript" src="/js/infobox.js"></script>
         <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
     </body>
 </html>

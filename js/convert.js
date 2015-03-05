@@ -89,14 +89,9 @@ function shareWorth(score,shares,b,k){
     return points;
 }
 
-function openInfo(param){
-    $(param).toggle();
-}
+
 
 $(document).ready(function () {
-    $('.close').click(function(){
-        $(this).parent().hide();
-    });
     
     $('#transaction').change(function () {
         selectedType = $('#type').val();

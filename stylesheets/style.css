@@ -65,3 +65,17 @@ body {
 .profile{
     margin-bottom: 22px;
 }
+
+/* Infobox styling */
+.infobox{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 15px;
+    background-color: #eee;
+    border-color: #aaa;
+    color: black;
+}
+
+.ingress{
+    font-size: 15px;
+}
