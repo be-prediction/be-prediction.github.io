@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/techdetails.html">Technical details</a></li>
+                                <li><a href="/interface.html">Market interface</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                        <li id="participate"><a href="/participate.html">Participate</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study09.pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>The lure of authority: Motivation and incentive effects of power</strong><br>
+                            Fehr, E. / Herz, H. / Wilkening, T. (2013)<br>
+                            American Economic Review, 103(4), 1325-1359</p>
+                        <p>
+                            Replication Author(s)<br>
+                            Felix Holzmeister, Jürgen Huber, Michael Kirchler and Michael Razen</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p>Fehr et al. study an authority-delegation game and compare delegation when the principal cannot be overruled (HIGH NOREC treatment) and when she can be overruled (PHIGH25 treatment). They find that the nonpecuniary disutility of being overruled causes a reluctance to delegate authority (there is more delegation in the HIGH NOREC compared to the PHIGH25 treatment).</p>
+<p><strong>Hypothesis to bet on:</strong> The nonpecuniary disutility of being overruled causes a reluctance to delegate authority (a comparison of the average delegation rate between the HIGH NOREC and the PHIGH25 treatments).</p>
+
+                            <p class="rep-h3">Power Analysis</p>
+<p>The original p-value is 0.011 (probit regression controlling for period fixed effects, standard errors are clustered by the individual, p. 1347): &ldquo;We find indeed that the average delegation rate of the HIGH NOREC treatment was higher (67.1 percent) than in the PHIGH25 treatment (41.3 percent)—a difference that is statistically significant (p=0.011).&rdquo; The original sample size is 60 participants (28 in HIGH NOREC treatment and 32 in the PHIGH25 treatment). To achieve 90% power the required sample size is 98 participants.</p>
+
+                            <p class="rep-h3">Sample</p>
+<p>The sample for replication consists of 102 students (2 sessions à 24 subjects in the HIGH NOREC treatment, 3 sessions à 18 subjects in PHIGH25 treatment) at the University of Innsbruck in Austria. There are no exclusion criteria.</p>
+
+                            <p class="rep-h3">Materials</p>
+<p>We use the material of the original experiment (programmed in z-Tree) along with the original German instructions, both available at the journal’s webpage.</p>
+
+                            <p class="rep-h3">Procedure</p>
+<p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;II. The Experiment&rdquo; (pp. 1332–1337) in the original study.</p>
+<p>First, subjects read the instructions – including control questions – followed by a verbal summary of the authority game given by the instructor. Since verbal summaries of the instructions are read aloud, treatment randomization within each of the sessions is not feasible, identical to the original study.</p>
+<p>Each session consists of 2 parts. In part one, subjects play seven periods of a single-player version of the game, identical to the main-stage game except that there is no second party, which provides subjects the chance to get familiar with the effort cost schedule and the computer program.</p>
+<p>In part two, subjects are divided into matching groups of ten subjects (five principals and five agents). Participants are randomly assigned the role of the principal or agent (referred to as Participant A and Participant B in the instructions) and remain in the same role for the entire experiment whereas the matching of principals and agents is randomly assigned in each period.</p>
+<p>The game in the PHIGH25 treatment consists of four stages, repeated for 25 periods. In the first stage, the principal decides whether to keep decision rights or to delegate them to the agent. In the second stage, both parties privately and simultaneously gather information about the n projects’ payoffs, where the agent does not yet know whether the principal delegated the decision or not. In the third stage, the subordinate recommends a project to the controlling party. Finally, the controlling party implements a project or the outside option on the basis of his information and the information communicated by the subordinate.</p>
+<p>The HIGH NOREC treatment differs from the PHIGH25 treatment in the fact that principals cannot be overruled as subordinate’s effort is restricted to zero and recommendations are not allowed.</p>
+<p>After completing the experiment, subjects will be privately paid in cash based on the same incentives as in the original study (average earnings were CHF 44 per subject in the original study).</p>
+
+                            <p class="rep-h3">Analysis</p>
+<p>The analysis will be performed exactly as in the original article. That is, differences in average delegation rates between the two treatments are estimated by probit regressions controlling for period fixed effects with standard errors clustered by individuals.</p>
+
+                            <p class="rep-h3">Differences from Original Study</p>
+<p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed at the University of Innsbruck, Austria, in 2015, on students from the University of Innsbruck, while the original data was gathered at Zurich University, Switzerland, in 2011, with students from Zurich University and the Federal Institute of Technology in Zurich. The experiment will be conducted in German as the original study.</p>
+<p>The paper studies a number of treatments. For replication, the focus is only on the comparison between HIGH NOREC and PHIGH25. We have chosen this hypothesis because we think it is the main between-subjects treatment comparison in the paper.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/techdetails.html">Technical details</a></li>
+                                <li><a href="/interface.html">Market interface</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                        <li id="participate"><a href="/participate.html">Participate</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study14.pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Organ allocation policy and the decision to donate</strong><br>
+                            Kessler, J.B. / Roth, A.E. (2012)<br>
+                            American Economic Review, 102(5), 2018-2047</p>
+                        <p>
+                            Replication Author(s)<br>
+                            Anna Dreber, Siri Isaksson and Magnus Johannesson</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p>Kessler and Roth test the effects of different organ donation policies on the registration of organ donors. They find that a policy that gives priority on waiting lists to those who have previously registered as donors increase registered organ donors compared to a control treatment.</p>
+                        <p><strong>Hypothesis to bet on:</strong> An organ donation policy giving priority on waiting lists to those who previously registered as donors increases registered organ donors (a comparison of the fraction choosing to be a donor between the priority condition treatment and the control condition treatment in rounds 1-15 (the rounds for the between subjects comparison)).</p>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as &lt;0.01, with a z-value of 9.3415 (regression 2 in Table 3, the coefficient for &ldquo;priority&rdquo; (shows the effect for the between subject rounds 1-15; linear probability model with clustering on subject)). As this p-value is based on data for more than the two treatments included in our replication, and includes data also for rounds 16-31; we re-estimated their model including only the two treatments of the replication and only rounds 1-15. This resulted in a p-value of p=1.631e-18 (and a z-value of 9.413).</p>
+                        <p>The original sample size is 288 participants for the control and priority treatments in rounds 1-15 (240 in the control treatment and 48 in the priority treatment). To achieve 90% power the required sample size is 39 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample consists of 48 students (groups of 12 participants) from Boston-area colleges and universities. Apart from having participated in the original experiment, there are no exclusion criteria.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original instructions, both available at the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;I. Experimental Design&rdquo; (pp. 2022 – 2025) in the original study.</p>
+                        <p>In the experiment, subjects make a decision modeled on the decision to register as an organ donor. Subjects register as donors at the beginning of each round and they play 31 rounds. At the beginning of the experiment, subjects are given instructions on how the game is played and are randomly assigned to have either low (\$0.4) or high (\$0.8) costs of donation. In the experiment, signing up as a donor at the beginning of the round is equivalent to being an available donor at death, so the terms &ldquo;donating&rdquo; and &ldquo;being a donor&rdquo; have the same meaning in the context of this experiment.</p>
+                        <p>Subjects start each round with one &ldquo;A Unit&rdquo; (representing a brain) and two &ldquo;B Units&rdquo; (representing kidneys) where B units can be donated and A units cannot. In each period, a subject faces the risk of losing their A unit (representing that they die) and their B units (in which case they start waiting for a donation). The subjects are given \$2 at the beginning of each round and in each period they can lose or gain money depending on their holdings of A and B units and donations. In case a subject lose their A unit they will ‘die’ and exit the round. Similarly, if a subject loses his B units and has to wait more than five periods for a donation of a B unit, he will die and exit the round. Subjects play 31 rounds and thus make 31 donation decisions in a fixed group of 12 subjects.</p>
+                        <p>We will use two (out of the original four) conditions, the control condition and the priority condition. In the control condition, subjects are informed that the donated B units are provided for those who need B units according to the time that those in need of B units had been waiting for B units. Thus under this condition, a subject who has been waiting for 5 periods for a B unit will receive one before a subject who has been waiting for 4 periods for a B unit and so on.</p>
+                        <p>In the priority condition, subjects are informed that those who agree to be donors at the start of the round are given priority in the case that they should need a B unit. Subjects are also informed that subjects who are not donors will only receive a B unit only if no donors would be in need of B units. Within each priority group, B units are assigned to subjects according to the length of their wait, with those who have waited the longest getting available B units first. Thus the priority condition generates an incentive to donate as donors are more likely than non-donors to receive a B unit if they need one (given that at least one member of the group donates).</p>
+                        <p>Subjects are not told how many rounds they will play the game, but all subjects will play the game for 15 rounds in one of the two treatments and followed by 16 rounds in the other treatment. There will be 2 groups (24 subjects) in each of the two treatments (in total 4 groups and 48 subjects). The test of the hypothesis will only be based on the results for the between subject comparison in the first 15 rounds (the &ldquo;Priority&rdquo; coefficient in regression (2) in Table 3 in the published paper; the &ldquo;Priority&rdquo; coefficient in regression (1) in Table 3 is a mixture of a between and a within subject treatment effect). Subjects will be randomly allocated to the two treatments. One group from each treatment will participate in the same session (24 subjects per session), and subjects will be randomly allocated to the two treatments within each session.</p>
+                        <p>After all rounds have been played, subjects will be privately paid in cash based on four randomly selected rounds using the same show-up fee (\$10) and incentives as in the original study (average earnings were \$25.87 per subject in the original study).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed in the same way as in the original article, but based on a regression only including the two treatments of the replication and periods 1-15. We will estimate a linear probability model to evaluate a comparison of the probability of choosing to be a donor between the priority condition treatment and the control condition treatment in rounds 1-15. We will thus estimate the priority coefficient in regression 2 on page 2029 in the original study (although based on a regression with only the two treatments of the replication and periods 1-15). As in the original study, we will cluster at the subject-level and use robust standard errors.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. In the original study the treatment was not varied within sessions, whereas we will randomly allocate subjects to the two treatments within each session. As we plan to include one group from each treatment in each session the instructions will not be read aloud as in the original study (as the instructions will differ between the two treatments). This replication will be performed at Harvard University in Cambridge MA, USA, in 2015, on students at Boston-area colleges and universities, while the original data was gathered at Harvard University in Cambridge MA, USA, in 2009, on students at Boston-area colleges and universities. The experiment will be in English as in the original study.</p>
+                        <p>The original study also tests other organ donation policies/treatments, but the focus of the replication is the comparison between the priority condition and the control condition (and the other treatments are therefore not included).</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

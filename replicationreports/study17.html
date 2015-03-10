@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/techdetails.html">Technical details</a></li>
+                                <li><a href="/interface.html">Market interface</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                        <li id="participate"><a href="/participate.html">Participate</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study17.pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>&ldquo;Last-place aversion&rdquo;: Evidence and redistributive implications</strong><br>
+                            Kuziemko, I. / Buell, R.W. / Reich, T. / Norton, M.I. (2014)<br>
+                            Quarterly Journal of Economics, 129(1), 105-149</p>
+                        <p>
+                            Replication Author(s)<br>
+                            Adam Altmejd, Anna Dreber and Magnus Johannesson</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p>Kuziemko et al. find that subjects who are randomly placed in the second-to-last place in terms of endowments are the least likely to give money to the person one rank below them. The paper includes two experiments where other things are also tested. Experiment 2 was chosen as it was the last experiment. In Experiment 2, there are two group sizes: 6 person groups and 8-person groups, out of which we randomly chose to study the 6-person groups.</p>
+                        <p><strong>Hypothesis to bet on:</strong> Subjects randomly placed in second-to-last place in terms of endowments are significantly less likely to allocate money to the person one rank below them in a choice of distributing \$2 to the person one rank below or the person one rank above (a comparison of allocation decisions between subjects randomly ranked second-to-last and subjects randomly ranked 2-4 in the 6 person redistribution experiment).</p>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as p&lt;0.10; the exact p-value=0.070 based on a z-test of the marginal effect from a probit regression (probit regressions with round fixed effects and clustering on individuals and a dummy for subjects ranked 1st and last (as they don’t have parallel choice sets); the coefficient of &ldquo;Second from last&rdquo; in regression (1) of Table II, p. 129): <em>&ldquo;Column (1) shows that the second-to-last-place player is significantly less likely to give to the lower-ranked player relative to other players,&rdquo;</em></p>
+                        <p>The original sample size is 42 participants. To achieve 90% power the required sample size is 134 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 138 students (in order to assign 6 person groups) from Boston-area colleges and universities. Apart from having participated in the original experiment, there are no exclusion criteria.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in PHP with a MySQL database) provided by the authors, along with instructions available at the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;IV.A. Experimental Design&rdquo; (pp. 124–125) in the original study.</p>
+                        <p>As participants enter the lab, they are seated sequentially in different groups of 6, to minimize the likelihood that people who know one another (and thus enter the lab together) are assigned to the same group. Each group will engage in the same game. Participants are seated in separate carrels surrounded by blinders. As all participants are seated, an experiment supervisor reads the instructions and subjects start by playing a test round before the actual experiment begins.</p>
+                        <p>As a round begins the computer randomly ranks the 6 players in each group and allocates \$1, \$2, …, \$6 to them. Subsequently, players with rank 2-5 (i.e. that are allocated \$5-\$2) choose between giving the player directly above or directly below their rank, 2 dollars. The first player (with \$6) makes a choice between the second (\$5) and third (\$4) player, and the last player considers players in fourth and fifth place. All participants are clearly instructed that the additional \$2 that they are allocating come from a separate account. When the round is finished the computer randomly selects one participant. Two dollars are added to the allocated amount of the player chosen by that participant. The final allocation is not shown to participants, and neither is the decision of other players.</p>
+                        <p>The game is repeated for 8 rounds. After all rounds are played, the computer randomly selects one round, and the final allocation from that round is paid out to all subjects. Subjects are further paid a show-up fee of \$15. Payments are distributed while the players are still at their seats actively engaged in answering a questionnaire, and without other players being able to see the amounts handed out. Show-up fees are paid to subjects when they exit the lab.</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>As in the original article, a probit regression is run on the data, with round and game fixed effects and with separate dummy variables for first- and last-place players. Standard errors are clustered by individual. The dependent variable is 1 if the participant has chosen to give money to a player with lower rank and 0 otherwise.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed at Harvard University in Cambridge MA, USA, in 2015, on students at Boston-area colleges and universities. The original data was gathered at Harvard University in Cambridge MA, USA, in September 2010, on subjects from the subject pool of the Harvard Business School Computer Lab for Experimental Research (CLER). The experiment will be in English as in the original study.</p>
+                        <p>The paper contains two experiments and other treatments: for the replication the focus is only on Experiment 2 and 6 person groups. Experiment 2 is included as it is the last experiment in the paper; we randomly determined whether to replicate the 6 person or the 8 person redistribution game. In the original study, subjects stayed in the lab for approximately one hour, partaking in several other experiments after the main study. We will only conduct the main study.</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

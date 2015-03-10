@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/techdetails.html">Technical details</a></li>
+                                <li><a href="/interface.html">Market interface</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                        <li id="participate"><a href="/participate.html">Participate</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study10.pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>A continuous dilemma</strong><br>
+                            Friedman, D. / Oprea, R. (2012)<br>
+                            American Economic Review, 102(1), 337-363</p>
+                        <p>
+                            Replication Author(s)<br>
+                            Colin Camerer, Gidi Nave</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p>Friedman and Oprea look at cooperation in a prisoner’s dilemma comparing a treatment with continuous time with flow payoffs over 60 seconds to a treatment with eight equal subperiods. Cooperation is higher under continuous time.</p>
+                        <p><strong>Hypothesis to bet on:</strong> Cooperation in the prisoner’s dilemma is higher in continuous time with flow payoffs over 60 seconds compared to eight equal subperiods (a comparison in the level of cooperation between the Continuous treatment and the Grid-8 treatment).</p>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as p&lt;0.01 (Wilcoxon Mann-Whitney test on subject median cooperation rate (across all periods); Table 2 and p.345): &ldquo;Overall, as can be seen in the bottom row, there is a strong increase in cooperation as we move from One-Shot to Grid-8 to Continuous, and pairwise Mann-Whitney tests applied to by-subject median cooperation rates confirm this ordering at the 1 percent level.&rdquo; To get the exact p-value we re-estimated the test based on the posted data and the p-value=4.0e-11. The original sample size is 78 participants (38 in the Continuous treatment and 40 in the Grid-8 treatment). To achieve 90% power the required sample size is 19 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 40 undergraduate students (20 for each treatment) from the Claremont university  subject pool. Subjects that have previously participated in a prisoner’s dilemma experiment are excluded.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in conG<sup>1</sup>) along with the original instructions available at the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;II. Treatments and Experimental Design&rdquo; (pp. 341–343) in the original study.</p>
+                        <p>Each subject can freely switch between row actions A and B by clicking a radio button (or pressing an arrow key), causing the chosen row to be shaded. In our main treatment (continuous time) the other player’s current choice is shown as a shaded column, and the intersection is doubly shaded. The computer response time to action switches is less than 50 milliseconds, giving players the experience of continuous action. The screen also shows the time series of actions (coded here as 1 for A and 0 for B) for the player and her counterpart in the upper right graph, while flow payoffs for each player are shown in the lower right graph. The top of the screen also shows the time remaining and the accumulated flow payoff.</p>
+                        <p>In the Continuous treatment each period lasts 60 seconds and subjects are allowed to change their actions at any time during this period. Subjects observe the unfolding history of actions and payoffs, and at the end of the period they earn the integral of the flow payoffs.</p>
+                        <p>In the Grid-8 treatment each 60-second period is divided into 8 equal subperiods. The payoffs in each subperiod are determined only by the last action profile chosen in that subperiod. A player only sees her counterpart’s choice at the end of the subperiod, and the strategy profile at the end of the subperiod becomes the initial profile of the next subperiod. Payoffs for the entire period are the average of the 8 subperiod payoffs.</p>
+                        <p>Four different payoff parameters are used (Easy (14, 4), Mix-a (18, 4), Mix-b (14, 8), and Hard (18, 8)). In both treatments, subjects are randomly rematched with a new counterpart each period. There are 32 periods divided into eight blocks. Each of the four parameter sets appears once in each block, in random order, and the sequences are matched across the two treatments. </p>
+                        <p>In the original study the experiment was carried out in groups of 10 subjects (with the exception of one session with the continuous treatment with 8 subjects). We also use a group size of 10 subjects which are randomly allocated to the two treatments. We will include one group of 10 subjects from each of the two treatments in each session (i.e. 20 subjects per session and 40 subjects in total). Subjects will be randomly allocated to the two treatments within each session.</p>
+                        <p>After all rounds have been played, subjects will be privately paid in cash based on the sum of their earnings using the same show-up fee (\$5) and incentives as in the original study (average earnings were \$17.50 per subject in the original study).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article. That is, a Wilcoxon Mann-Whitney test on subject median cooperation rate across all periods is conducted.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed at the at Claremont university, in 2015, on undergraduate students from the CNS lab subject pool, while the original data was gathered at the University of California, Santa Cruz, USA, in 2009, on undergraduate students from all major disciplines at the University of California, Santa Cruz. The experiment will be in English as in the original study.</p>
+                        <p>The original study also looks at a One-Shot treatment, but the focus of the replication is on the difference between Continuous and Grid-8 treatments.</p>
+
+
+                        <hr>
+                        <p class="footnote"><sup>1</sup> The conG environment can be downloaded from <a href="https://leeps.ucsc.edu/cong" target="_blank">https://leeps.ucsc.edu/cong</a>, as suggested by Dan Friedman.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

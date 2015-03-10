@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/techdetails.html">Technical details</a></li>
+                                <li><a href="/interface.html">Market interface</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                        <li id="participate"><a href="/participate.html">Participate</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study16.pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Coordination in the presence of asset markets</strong><br>
+                            Kogan, S. / Kwasnica, A.M. / Weber, R.A. (2011)<br>
+                            American Economic Review, 101(2), 927-947</p>
+                        <p>
+                            Replication Author(s)<br>
+                            Felix Holzmeister, Jürgen Huber, Michael Kirchler and Michael Razen</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p>Kogan et al. test whether the output in a &ldquo;second-order statistic&rdquo; coordination game is lower when there is a preplay asset market compared to when there is no such market due to market communication effects. They find that a preplay market significantly diminishes output in the coordination game compared to the control treatment without a preceding asset market.</p>
+                        <p><strong>Hypothesis to bet on:</strong> The presence of a preplay asset market lowers output in a &ldquo;second-order statistic&rdquo; coordination game (a comparison of group output of the insider groups in the market treatment and the control group in Experiment 2).</p>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as p&lt;0.01; the exact p-value is p=0.000026 based on a z-test of the regression coefficient (regression 1 in Table 8, the coefficient for &ldquo;Market&rdquo;; ordered probit regression with group random effects and Huber-White standard errors).The original sample size is 126 participants (54 in the control treatment and 72 in the market treatment). To achieve 90% power the required sample size is 75 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 90 students (5 sessions à 18 subjects; 2 sessions for the Control treatment, 3 sessions for the Market treatment) at the University of Innsbruck in Austria. To keep the population as close as possible to the original experiment, subjects with minimal prior exposure to coordination games but with experience in market experiments are selected.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>For the coordination game, we use the material of the original experiment (programmed in z-Tree) which has been made available on the journal’s webpage. The original market experiment has been conducted using a web-based trading platform developed at Penn State. Since this program is unsupported and undocumented for the most part, the asset market is rebuilt in z-Tree (Fischbacher, 2007), replicating the market design and implementation as closely as possible (based on several screenshots and information provided by the original authors). As the replication study is conducted in German, all materials from the original study are translated from English to German.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;A. Experimental Design&rdquo; (pp. 932–935) in the original study.</p>
+                        <p>We conduct two sessions for the control treatment and three sessions for market treatment. Subjects intending to participate have to register for two sessions and will be randomly assigned to one of the treatments once registration has closed. Each session consists of 18 subjects, which are randomly assigned to either one of two small three-person groups or one of two large six-person groups. Assignments to groups remain unchanged for all periods conducted and every subject knows the group assignment and the size of their group as well as the other groups. Throughout the entire session, no communication between subjects is permitted and all instructions, choices, and information are transmitted via the computer terminal (z-Tree program). Each session consists of 8 periods, all identical in structure.</p>
+                        <p>In the Control treatment, subjects simply play a &ldquo;second-order statistic&rdquo; coordination game – i.e., the output is determined by the second-lowest input – without a preceding asset market. In the Market treatment, players participate in a two-stage game consisting of an asset market followed by the coordination game. Trading takes place anonymously over one of two double-auction markets, populated by a small and a large group each, i.e., 9 subjects. The liquidating values of the securities traded in the asset market depend upon the output in the subsequent coordination game, where the value in one market is determined by the output of a small group, and the value in the other market is determined by a large group.</p>
+                        <p>After completing the experiment, subjects will be privately paid in cash based on the same incentives and using the same show-up fee (\$6) as in the original study (average earnings in the original study were \$13.18 per subject in the Control treatment and \$11.40 in the Market treatment).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis of the respective hypothesis will be performed exactly as in the original article. That is, the group output of the Market treatment is compared to the output of the Control group without preceding asset market by employing an ordered probit regression with group random effects and Huber-White standard errors (regression 1 in Table 8, p. 943).</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed at the University of Innsbruck, Austria, in 2015, on students from the University of Innsbruck, while the original data was gathered at the Laboratory for Economic Management and Auctions at Pennsylvania State University in University Park, USA, in 2006–2007, with subjects from the same lab. The experiment will be conducted in German and not in English as in the original study.</p>
+                        <p>The paper studies a number of treatments differentiating between insiders and outsiders as well as different incentives of the market relative to the coordination game (Market L vs Market H) in two different experiments. For replication, the focus is only on the comparison between insider groups and the control group in Experiment 2. (The second experiment in the original study only includes the Market L treatment as well.)</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>
