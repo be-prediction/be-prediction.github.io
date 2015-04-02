@@ -84,6 +84,14 @@ input{
     width: 1px;
 }
 
+.shareworth{
+    display:none;
+}
+
+#shareworth{
+    display: none;
+}
+
 /* Table row spacing for calculator */
 tr.spaceOver > td
 {

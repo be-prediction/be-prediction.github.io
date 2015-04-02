@@ -1,13 +1,13 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 @media (min-width: 0px) and (max-width: 349px) {
-  .navbar-brand {
-    font-size: 0.7em !important;
-  }
+    .navbar-brand {
+        font-size: 0.7em !important;
+    }
 }
 
 /* Change when navbar collapses */
@@ -55,6 +55,24 @@ body {
 .rep-h3{
     font-weight: bold;
     margin: 22px 0 6px 0;
+}
+
+.rep-h6{
+    color: white;
+    margin: 0;
+}
+
+.rep-ingress{
+    font-style: italic;
+    margin-top: 33px;
+}
+
+.rep-panel-body{
+    background-color: #eee;
+}
+
+.rep-panel-heading{
+    background-color: #999999 !important;
 }
 
 .rep-top{
