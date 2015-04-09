@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2003%20-%20Bartling%20et%20al%20(2012).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Screening, competition and job design: Economic origins of good jobs</strong><br>
+                            Bartling, B. / Fehr, E. / Schmidt, K.M. (2012)<br>
+                            American Economic Review, 102(2), 834-864</p>
+                        <p>
+                            Replication Authors:<br>
+                            Felix Holzmeister, Jürgen Huber, Michael Kirchler and Michael Razen</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">In an employer-employee setting, Bartling et al. test whether adding a screening opportunity (informing the employer about the effort of the work in the past three periods) for an employer that can offer full or limited discretion contracts increases efficiency or not compared to a base treatment without screening opportunity. They find that a screening opportunity increases efficiency (average per-period total surplus).</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                Adding a screening opportunity (informing the employer about the effort of the worker in the past three periods) for an employer that can offer full or limited discretion contracts increases efficiency (a comparison in average per-period total surplus between the base treatment and the screening treatment).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is 0.007 (Wilcoxon Mann-Whitney test using matching group averages as the unit of observation; p. 854 under result 6): &ldquo;Overall, the average per-period total surplus is 58 percent higher in the screening treatment—a difference that is highly significant (rank-sum test on matching group averages, p=0.007).&rdquo;</p>
+                        <p>The original sample size is 216 participants (108 in the base treatment and 108 in the screening treatment). To achieve 90% power the required sample size is 312 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 360 students (5 sessions à 36 subject in each of the two treatments) at the University of Innsbruck in Austria. There are no exclusion criteria.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original German instructions, both available at the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;I. Experimental Design and Procedures&rdquo; (pp. 839–841) in the original study.</p>
+                        <p>Subjects intending to participate have to register for two sessions and will be randomly assigned to one of the treatments once registration has closed. Upon arrival at the lab, half of the subjects are randomly and anonymously assigned the role of an employer, the other half the role of an employee. The experiment is framed as an employment relationship.</p>
+                        <p>The employer can offer an employment contract to the employee that specifies a fixed wage w and a requested, nonbinding, effort level ê. If the employee rejects the contract offer, no wage is paid, no effort is exerted, and both parties receive their reservation payoffs of 0. If the employee accepts, the employer must pay the offered wage, irrespective of the actual effort the employee chooses.</p>
+                        <p>There are two types of contracts that the employer can offer: a contract with full discretion and a contract with limited discretion which differ in two dimensions:<br>
+                        <ol type="i">
+                            <li>Feasible effort levels: In a contract with full discretion, the employee can choose any effort level between 1 and 10, whereas he must choose an effort level of at least 3 in a contract with limited discretion given he accepts the contract.</li>
+                            <li>Efficiency: The effort efficiency of the relationship is characterized by an employee’s efficiency parameter b = 5 in a contract with full discretion, while the efficiency parameter is only b = 4 in a contract with limited discretion.</li>
+                        </ol>
+                        </p>
+                    <p>All employers and employees know the payoff functions, the set of feasible contracts, and hence the efficiency implications of limited discretion.</p>
+                    <p>In each period, an employer is randomly matched with one of the employees. In the base treatment, the employer does not receive any information about his current employee, while he receives an imperfect signal about his current employee’s track record in the screening treatment: he is informed about his current employee’s effort choices in the last three periods. Note that an employer neither observes the contract types, the wage offers, nor the requested effort levels that his current employee faced in the last three periods. Employees know that future employers will be able to observe their current effort choices. Apart from the information given to the employers in the screening treatment, the two treatments are identical.</p>
+                    <p>As in the original experiment, sessions of 36 subjects for each treatment are run and two matching groups of 9 employers and 9 workers in each session are implemented. As each session involves 15 periods where employers are randomly matched with employees, some of the subjects interact with the same opponent more than once. However, subjects do not know that they are divided into two matching groups, nor do they know whether and, if so, with whom they interact more than once. We will randomly allocate subjects into the different treatments.</p>
+                    <p>After all rounds have been played, subjects will be privately paid in cash based on the same incentives as in the original study (average earnings were CHF 43.00 per subject in the original study).</p>
+
+                    <p class="rep-h3">Analysis</p>
+                    <p>The analysis will be performed exactly as in the original article. That is, Wilcoxon Mann-Whitney tests on matching group averages will be conducted.</p>
+
+                    <p class="rep-h3">Differences from Original Study</p>
+                    <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed at the University of Innsbruck in Innsbruck, Austria, in 2015, on students from the University of Innsbruck, while the original data was gathered at the Zurich University in Zurich, Switzerland, in 2007, on students from Zurich University and the Federal Institute of Technology in Zurich. The experiment will be in German as in the original study.</p>
+                    <p>In a third treatment the original study also looks at labor market competition, but the focus of the replication is on the effect of the screening opportunity, hence we replicate only treatments base and screening. As no participants in the original experiment </p>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+
+        <footer>
+            <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+        </footer>
+        </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.11.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

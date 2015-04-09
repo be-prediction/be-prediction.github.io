@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2015%20-%20Kirchler%20et%20al%20(2012).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Thar she bursts: Reducing confusion reduces bubbles</strong><br>
+                            Kirchler, M. / Huber, J. / Stöckl, T. (2012)<br>
+                            American Economic Review, 102(2), 865-883</p>
+                        <p>
+                            Replication Authors:<br>
+                            Anna Dreber, Siri Isaksson and Magnus Johannesson</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">Kirchler et al. compare mispricing in experimental asset markets under constant fundamental value with declining fundamental value. Mispricing is higher under a declining fundamental value.</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                A declining fundamental value (FV) increases mispricing in experimental asset markets (a comparison of the mean relative absolute deviation (RAD) between treatment 1 (T1) and treatment 2 (T2)).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as p&lt;0.05, with a z-value of 2.402, implying p=0.016 (Wilcoxon Mann-Whitney test on mean RAD between the treatments T1 and T2 with RAD measured on the market level, Table 6, middle of the bottom panel on p. 875). The original sample size is 120 participants (60 in treatment T1 and 60 in treatment T2). To achieve 90% power the required sample size is 219 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 220 students at the Goethe University Frankfurt in Germany. We will recruit students who are Bachelor or Master students in business administration and/or economics, and if needed the recruitment will be extended to bachelor and masters students in other fields. Individuals that have participated in other asset market experiments will be excluded.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original German instructions, both available at the journal’s webpage. In addition, we will use additional materials provided by the authors. This includes a step by step guide of the experimental procedure and all the materials needed in treatment T1 and T2 (various z-Tree files, instructions and a power point presentation).</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;II. The Experiment&rdquo; (pp. 869–872) in the original study.</p>
+                        <p>The experiment is trying to find possible causes for asset bubbles in the laboratory using the design of Smith/Suchanek/Williams (1988) seminal study. Before the main experiment, a standard lottery experiment (Holt/Laury, 2002) is conducted in order to measure risk aversion.</p>
+                        <p>The experiment starts by the subjects reading the instructions on their own for 15 minutes. After this the trading screen is explained in detail through a power point presentation using the same manuscript as the original authors and then the subjects play two trial periods to familiarize themselves with the system.</p>
+                        <p>In the experiment, a market consists of 10 subjects that are allowed to trade a dividend paying stock for experimental currency called Taler in a sequence of 10 periods. During each period, subjects trade using a continuous double auction. Subjects can act as both buyers and sellers, submitting prices and quantities to the market. Trade occurs as players form contracts and each trading period lasts for 120 seconds.</p>
+                        <p>At the beginning of each experimental session, half of the subjects are endowed with 60 shares and 1000 Taler (experimental currency) and the other half are endowed with 20 shares and 3000 Taler. Initially the FV is 50 across all treatments, so all subjects start with an initial wealth of 4000 Taler. Dividends are paid out at the end of each period or are deferred and paid out at the end of the experiment. The realized dividend payments are not known in advance, but subjects learn the dividend at the end of each respective period.</p>
+                        <p>In the market with the declining FV, the dividend is either 0 or 10 with equal probability. The FV therefore starts at 50 and then declines with 5 in each period, making the asset worthless by the tenth period. In the market with the constant FV the dividend is either -5 or 5 with equal probability keeping the FV constant across periods at 50.</p>
+                        <p>We will replicate the experiment using the first two treatments T1 and T2:<br>
+                            <span style="width: 33px;display:inline-block;"></span>T1: declining FV and increasing C/A<br>
+                            <span style="width: 33px;display:inline-block;"></span>T2: constant FV and an identical increase in the C/A as in T1<br>
+                            where C/A is the cash-to-asset value ratio.</p>
+                        <p>Subjects will be randomly allocated to the two treatments. We will include one market with 10 subjects from each of the two treatments in each session (i.e. 20 subjects per session). Subjects will be randomly allocated to the two treatments within each session.</p>
+                        <p>After all rounds have been played, subjects complete a questionnaire testing their understanding of the FV and asking them for demographic data. Subjects then will be privately paid in cash based on the same incentives as in the original study (average earnings were €4 in the lottery task and €10 in the asset markets per subject in the original study).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article. The research question of interest for this replication is &ldquo;RQ2: Does a declining fundamental value lead to mispricing and/or overvaluation?&rdquo; This is examined with Mann-Whitney-U-tests of the RAD (mispricing) for pairwise comparisons’ of subjects in T1 and T2.</p>
+                        <p>RAD (relative absolute deviation) and is calculated as follows:
+                            $$RAD=1/n∑↙{p=1}↖N({∣\ov{P_p}-FV_p∣}/{∣\ov {FV}∣})$$    
+                            where $P_p$ corresponds to the volume weighted mean price in period $p$, $FV_p$ is the fundamental value in period $p$ and $\ov {FV}$ is the average fundamental value of the market. The interpretation of RAD equal to 0.1, for example, is that prices on average differ by 10% from the average fundamental value.</p>
+                        <p>The results of interest are the following: in T1 the average mispricing is 0.414, and in T2 it is 0.079. The difference corresponds to 0.335 with a Z value of −2.402 (Mann-Whitney test), which corresponds to p=0.016. That is, the authors find that the difference is significant, thus, there is high mispricing when the fundamental value (FV) is declining compared to when it is constant.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. In the original study the treatment was not varied within sessions, whereas we will randomly allocate subjects to the two treatments within each session. As we plan to include one group from each treatment in each session the part of the power point presentation which varies across treatments (the part presenting the history screen) will not be read aloud as in the original study. Instead, we will give a power point presentation only of the trading screen following the same manuscript as the original authors, and provide the information of the history screen found in the instructions as a presentation of the history screen. This is an unavoidable deviation from the original experiment which presented both the trading screen and the history screen in the power point presentation. This replication will be performed at the Goethe University Frankfurt, in 2015, on students at the University of Frankfurt, while the original data was gathered at the University of Innsbruck, Austria, in 2009-2010. As in the original study we will include Bachelor and Master students in business administration and/or economics, but if needed the recruitment will be extended to bachelor and masters students in other fields. Individuals that have participated in other asset market experiments will be excluded. The experiment will be in German as in the original study.</p>
+                        <p>The original study also looks at variation in the cash-to asset value (constant or increasing) and a different context, but the focus of the replication is on the difference between constant and declining fundamental value.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2007%20-%20Duffy%20&%20Puzzello%20(2014).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Gift exchange versus monetary exchange: Theory and evidence</strong><br>
+                            Duffy, J. / Puzzello, D. (2014)<br>
+                            American Economic Review, 104(6): 1735-1776</p>
+                        <p>
+                            Replication Authors:<br>
+                            Felix Holzmeister, Jürgen Huber, Michael Kirchler and Michael Razen</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">Duffy and Puzzello test whether efficiency in the Lagos-Wright model is higher in an environment with money than in an environment without money. The authors test this for two treatments: with 6 or 14 subjects. We randomly picked one of the two population sizes for the replication and ended up with the population size of 6 subjects.</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                Efficiency in the Lagos-Wright money model is higher in an environment with money than in an environment without money for a population size of 6 (comparison in efficiency ratio between the money (M6) and the no money6 (NM6) treatments).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is 0.01 (Wilcoxon Mann-Whitney test on p.1764 and from tables 7 and 12): <em>&ldquo;Nevertheless, using the session-level efficiency ratios over all rounds as reported in Table 7 for the money treatment sessions and in the last three columns of Table 12 for the no money treatment sessions, a Wilcoxon Mann-Whitney test indicates that we can reject the null hypothesis of no difference in efficiency ratios between (i) the M6 and NM6 treatments and (ii) the M14 and NM14 treatments in favor of the alternative that efficiency ratios are higher in each of the two M treatments relative to the comparable NM treatment (p=0.01 for the first test and p=0.04 for the second test).&rdquo;</em></p>
+                        <p>The original sample size is 54 participants (24 in the M6 treatment and 30 in the NM6 treatment). To achieve 90% power the required sample size is 86 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of students at the University of Innsbruck in Austria. To form groups of 6 subjects we select sample size to be 96 and run 8 groups (48 subjects) in M6 and 8 groups (48 subjects) in NM6. As in the original study, the sample consists of undergraduate students with no prior experience with the game described in the study.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original study (programmed in z-Tree) for the main experiment and reproduce the risk elicitation task based on Holt/Laury (2002) in z-Tree as well, which has been run with a Java-Application in the original study. As the replication study is conducted in German, all materials from the original study are translated from English to German.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;III.B. Experimental Design&rdquo; (pp. 1744–1747) in the original study.</p>
+                        <p>We conduct two sessions for treatment M6 and two sessions for treatment NM6. The written instructions are read aloud to make them common knowledge and subjects have to correctly answer a number of quiz questions testing their understanding of the experiment. After all subjects have correctly answered all quiz questions, the experiment starts. Subjects have to register for two sessions (one for the money and the other for the no money treatment) and we decide randomly into which session a subject is selected (they get the information in their confirmation e-mail). As a consequence in one session of 24 subjects only one treatment will be run and so there are no problems in reading out loud the instructions. In each session, 24 subjects are randomly assigned to 4 groups of size 6. In the first part of the session the main experiment is run.</p>
+                        <p>Each session consists of several sequences. Each sequence consists of an indefinite number of periods of a stage game. Each stage game involves two rounds, one decentralized and one centralized meeting round. At the end of each stage game, the sequence continues with another period of the stage game with probability 5/6 and ends with probability 1/6. In both treatments, &ldquo;points&rdquo; are exchanged to Euros at the end of the experiment, while &ldquo;tokens&rdquo; only exist in the money treatment and have no intrinsic value in terms of points. Point holdings are carried over across sequences, while token holdings are reset at the beginning of every sequence.</p>
+                        <p>At the start of every new indefinite sequence in the money treatment (M6), each subject in the Lagos-Wright economy is endowed with &ldquo;tokens.&rdquo; Within a period (stage game), the decentralized meeting round begins with a new random pairwise matching of all subjects. Within each pair, one player is chosen with probability 1/2 to be the producer and the other player is designated as the consumer for that round. Consumers move first and are asked to form a &ldquo;proposal&rdquo; as to how much of the decentralized good they want their randomly matched producer to produce for them and how many tokens the consumer is willing to offer for the quantity requested. Then, each proposal is anonymously transmitted to their matched producer. Producers are further informed about the consumer’s benefit (in points) from receiving the proposed quantity and of their own cost (in points) of producing this quantity. Producers then have to decide whether to accept or reject the consumer’s proposal. If the producer accepts the proposal, then it is implemented: producers produce the quantity at a cost to themselves and the consumer consumes the quantity yielding her a benefit. The proposed quantity of tokens is transferred from the consumer to the producer. If the producer rejects the proposal then no exchange takes place; both earn 0 points for the round and their token balances remain unchanged.</p>
+                        <p>The second round in each period of the stage game brings together all subjects to participate in a centralized market. At the beginning of the centralized round, subjects can decide whether they want to participate in that market and, if so, choose between being a consumer or a producer of a certain good. Each unit of consumption brings a benefit of one point, while each unit of production induces costs of one point. Active consumers and producers can enter the amount and the unit price (in tokens) at which they want to buy or sell, respectively. Subsequently, the market clearing price is determined by a call market mechanism and the corresponding transactions (exchange of points for tokens) are carried out.</p>
+                        <p>In the no money treatment, decentralized meetings remain similar, but with consumers and producers exchanging points only, instead of points for tokens. In the second stage, however, centralized meetings in the Lagos-Wright economy are replaced by centralized meetings where agents only choose between producing zero or one unit of the good. Their consumption is determined by average production. This means that subjects interact in a public good game rather than a call market. All subjects are instructed that producing a unit of the good costs them one point and that all production decisions are made simultaneously. The net payoff in the centralized meeting for each subject is then computed as average production minus the individual cost of production (in points).</p>
+                        <p>In the second part of the session, subjects participate in a lottery decision-making task of Holt/Laury (2002) to elicit their risk attitudes. After both parts have been completed, subjects will be privately paid in cash based on the cumulative point totals from all periods of all sequences played (average earnings in the original study were \$23.96 per subject in the money treatment and \$22.52 per subject in the no money treatment).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article. In particular, we will use the session-level efficiency ratios over all rounds for the money treatment sessions (reported like in Table 7) and for the no money treatment sessions (reported like in the last three columns of Table 12). We will run a Wilcoxon Mann-Whitney test to investigate the null hypothesis of no difference in efficiency ratios between the M6 and NM6 treatments against the alternative that efficiency ratios are higher in the M6 treatment relative to treatment NM6.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed in at the University of Innsbruck in Innsbruck, Austria, in 2015, on students from the University of Innsbruck, while the original data was gathered at the University of Pittsburgh in Pittsburgh, USA, in 2010-2011, on undergraduate students from the University of Pittsburgh. The experiment will be conducted in German rather than in English (as in the original study).</p>
+                        <p>The original study tests several treatments: for the replication the focus is only on money vs no money for the population size of 6 subjects.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

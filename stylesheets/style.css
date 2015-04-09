@@ -1,18 +1,13 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 @media (min-width: 0px) and (max-width: 349px) {
-  .navbar-brand {
-    font-size: 0.7em !important;
-  }
-}
-
-.autoWidth td:first-child{
-    white-space: nowrap;
-    width: 1px;
+    .navbar-brand {
+        font-size: 0.7em !important;
+    }
 }
 
 /* Change when navbar collapses */
@@ -62,7 +57,69 @@ body {
     margin: 22px 0 6px 0;
 }
 
+.rep-h6{
+    color: white;
+    margin: 0;
+}
+
+.rep-ingress{
+    font-style: italic;
+    margin-top: 33px;
+}
+
+.rep-panel-body{
+    background-color: #eee;
+}
+
+.rep-panel-heading{
+    background-color: #999999 !important;
+}
+
+.rep-top{
+    margin: 50px 0 22px 0;
+}
+
+.footnote{
+    font-size: 12px;
+}
+
 /* Profile styling2 */
 .profile{
     margin-bottom: 22px;
+}
+
+/* Instruction / details styling */
+.text-block h5{
+    margin-top: 16px;
+    margin-bottom: 7px;
+}
+
+
+/* Infobox styling */
+.infobox{
+    margin-bottom: 11px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 15px;
+    background-color: #eee;
+    border-color: #aaa;
+    color: black;
+}
+
+.example{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.quote{
+    padding: 0 22px 0 22px;
+}
+
+.ingress{
+    font-size: 15px;
+}
+
+.infobox h6{
+    margin-top: 7px;
+    margin-bottom: 7px; 
 }

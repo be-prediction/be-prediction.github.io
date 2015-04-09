@@ -53,7 +53,6 @@
                             </ul>
                         </li>
                         <li id="people"><a href="/people.html">People</a></li>
-                        <li id="participate"><a href="/participate.html">Participate</a></li>
                     </ul>
                 </div><!--/.navbar-collapse -->
             </div>
@@ -65,26 +64,249 @@
             </div>
             <!-- Example row of columns -->
             <div class="row">
-                <div class="col-md-6">
-                    <p>The calculator will be made available after the <a href="participate.html">registration</a> has closed.</p>
+                <div class="col-md-4 col-sm-6">
+                    <h4>Input</h4>
+                    <form id="transaction">Type: 
+                            <select type="multiple" id="type">
+                                <option value="invest" selected="selected">New investment</option>
+                                <option value="sell">Investment value</option>
+                            </select>
+                        </p>
+                    </form>
+                    <table id="invest">
+                        <tr class="autoWidth">
+                            <td>Current price:</td>
+                            <td>
+                                <div class="input-group-sm">
+                                    <input id="sc" class="form-control maxInput" type="number" min="0" max ="100" step="0.01" value="0.50" aria-describedby="basic-addon2">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="autoWidth spaceSmOver">
+                            <td>Token investment:</td>
+                            <td>
+                                <div class="input-group-sm">
+                                    <input id="i" class="form-control maxInput"  type="number" min="0" value="0">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="autoWidth spaceSmOver">
+                            <td></td>
+                            <td>
+                                <div id="investtype" class="btn-group btn-group-xs" data-toggle="buttons" role="group" aria-label="...">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="investtype" id="long" autocomplete="off" checked>Long
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="investtype" id="short" autocomplete="off">Short
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="sell" style="display:none">
+                        <tr class="autoWidth">
+                            <td>Price at investment:</td>
+                            <td>
+                                <div class="input-group-sm">
+                                    <input id="s_sc1" type="number" min="0" max ="100" step="0.01" value="0.50" class="maxInput form-control">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="autoWidth spaceSmOver">
+                            <td>Initial token investment:</td>
+                            <td>
+                                <div class="input-group-sm">
+                                    <input id="s_i" type="number" class="maxInput form-control" min="0" value="0" onkeyup="sell()">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="autoWidth spaceSmOver">
+                            <td></td>
+                            <td>
+                                <div id="selltype" class="btn-group btn-group-xs" data-toggle="buttons" role="group" aria-label="...">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="selltype" id="long" autocomplete="off" checked>Long
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="selltype" id="short" autocomplete="off">Short
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="spaceMedOver autoWidth">
+                            <td>Current price:</td>
+                            <td>
+                                <div class="input-group-sm">
+                                    <input id="s_sc2" type="number" min="0" max ="100" step="0.01" value="0.50" class="maxInput form-control">
+                                </div>
+                            </td> 
+                        </tr>
+                    </table>
                 </div>
-            </div>
-            <hr>
 
-            <footer>
-                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
-                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
-            </footer>
+                <div class="col-md-4 col-sm-6">
+                    <h4>Result</h4>
+                    <table>                
+                        <tr>
+                            <td colspan="2">
+                                <h5>Price: <span class="open" onclick="openInfo('#priceinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                                <div id="priceinfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
+                                    <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <strong class="ingress">The price</strong> is given by:
+                                    $$p(S)=k·{\e^{S\/b}}/{\e^{S\/b}+1}$$
+                                    where $S$ are the net sales.
+                                </div>
+                            </td>
+                        </tr>              
+                        <tr class="autoWidth">
+                            <td><span class="invest">Before investment</span><span class="shareworth">Initial</span>:</td>
+                            <td>
+                                <div class="calc-output"><span id="p1">0.50</span></div>
+                            </td>
+                        </tr>
+                        <tr class="autoWidth">
+                            <td><span class="invest">After investment</span><span class="shareworth">Current</span>:</td>
+                            <td>
+                                <div class="calc-output"><span id="p2">0.50</span></div>
+                            </td>
+                        </tr>
+                        <tr class="spaceOver">
+                            <td colspan="2">
+                                <h5>Net sales: <span class="open" onclick="openInfo('#salesinfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                                <div id="salesinfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
+                                    <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <strong class="ingress">The net sales</strong> are defined as shares invested in long, net shares invested in short. They can be solved for by using the price $p$:
+                                    $$S(p)=b·\l\n({p\/k}/{1-p\/k}).$$
+                                </div>
+                            </td>
+                        </tr>              
+                    <tr class="autoWidth">
+                        <td><span class="invest">Before investment</span><span class="shareworth">Inital</span>:</td>
+                        <td>
+                            <div class="calc-output"><span id="s1">0</span></div>
+                    </tr>
+                    <tr class="autoWidth">
+                        <td><span class="invest">After investment</span><span class="shareworth">Current</span>:</td>
+                        <td>
+                            <div class="calc-output"><span id="s2">0</span></div>
+                    </tr>
+                    <tr class="spaceOver invest">
+                        <td colspan="2">
+                            <h5><span id="impact">Investment</span> impact: <span class="open" onclick="openInfo('#investInfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                            <div id="investInfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
+                                <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <strong class="ingress">The shares purchased</strong> for a given <span class="trTypeT">investment</span> are calculated by integrating the price between current net sales in the asset and the final net sales after the <span class="trTypeT">purchase</span>. The value of this must be equal to the tokens invested:
+                                $$∫_{S_1}^{S_2}p(S)\d s=I.$$
+                                This is easily solved for $S_2$ and the shares purchased are $s=S_2-S_1$.
+                                <br>
+                                <strong class="ingress">The balance change</strong> is the negative of the tokens <span class="trTypeID">invested</span>.
+                                <br>
+                                <strong class="ingress">The price change</strong> is simply calculated by $p(S_1)-p(S_2)$.
+                                <br>
+                                <strong class="ingress">The average price</strong> per share is calculated by $I\/s$.
+                            </div>
+                        </td>
+                    </tr>          
+                    <tr class="autoWidth invest">
+                        <td>Shares purchased:</td>
+                        <td>
+                            <div class="calc-output"><span id="s">0</span></div>
+                        </td>
+                    </tr>
+                    <tr class="autoWidth invest">
+                        <td>Balance change:</td>
+                        <td>
+                            <div class="calc-output"><span id="pc">0</span></div>
+                        </td>
+                    </tr>
+                    <tr class="autoWidth invest">
+                        <td>Price change:</td>
+                        <td>
+                            <div class="calc-output"><span id="p">0</span></div>
+                        </td>
+                    </tr>
+                    <tr class="autoWidth invest">
+                        <td>Average price:</td>
+                        <td>
+                            <div class="calc-output"><span id="avgp">0</span></div>
+                        </td>
+                    </tr>
+                    <tr class="spaceOver shareworth">
+                        <td colspan="2">
+                            <h5><span id="impact">Shares: <span class="open" onclick="openInfo('#shareInfo')"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><span class="sr-only">Info</span></span></h5>
+                            <div id="shareInfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
+                                <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <strong class="ingress">The shares <span class="trTypeD">purchased</span></strong> for a given <span class="trTypeT">investment</span> are calculated by integrating the price between current net sales in the asset and the final net sales after the <span class="trTypeT">purchase</span>. The value of this must be equal to the tokens <span class="trTypeD">invested</span>:
+                                $$∫_{S_1}^{S_2}p(S)\d s=I.$$
+                                This is easily solved for $S_2$ and the shares <span class="trTypeD">purchased</span> are $s=S_2-S_1$.
+                                <br>
+                                <strong class="ingress">The balance change</strong> is the negative of the tokens <span class="trTypeID">invested</span>.
+                                <br>
+                                <strong class="ingress">The price change</strong> is simply calculated by $p(S_1)-p(S_2)$.
+                                <br>
+                                <strong class="ingress">The average price</strong> per share is calculated by $I\/s$.
+                            </div>
+                        </td>
+                    </tr> 
+                    <tr class="autoWidth shareworth">
+                        <td>Shares held:</td>
+                        <td>
+                            <div class="calc-output"><span id="s_sh">0</span></div>
+                        </td>
+                    </tr>
+                    <tr class="autoWidth shareworth">
+                        <td>Investment value:</td>
+                        <td>
+                            <div class="calc-output"><span id="s_sw">0</span></div>
+                        </td>
+                    </tr>
+                    </table>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h3>About</h3>
+                <p>This &ldquo;calculator&rdquo; allows you to investigate how investing or selling tokens at different market situations affects the market. Remember that you start out with 100 Tokens.</p>
+                <p>Note that this is only an attempt to demonstrate the workings of the market, and that any error here does not reflect an error in the actual markets.</p>
+                <p>All calculations are for a market maker based on a logarithmic scoring rule. In the actual markets we use parameters $b=100$ and $k=1$.</p>
+                <h5>Parameters</h5>
+                <table>             
+                    <tr class="autoWidth">
+                        <td>Token value of a share, $k$:</td>
+                        <td>
+                            <div class="input-group-sm">
+                                <input id="k" type="number" class="form-control input" min="0" step="1" value="1">
+                                <input id="k_old" type="hidden" class="form-control input" min="0" step="1" value="1">
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr class="autoWidth spaceSmOver">
+                        <td>Liquidity parameter, $b$:</td>
+                        <td>
+                            <div class="input-group-sm">
+                                <input id="b" type="number" class="form-control input" min="0" step="1" value="100">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+
+        <footer>
+            <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+        </footer>
         </div> <!-- /container -->
 
-        <!-- Bootstrap core JavaScript -->
-        <!-- ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="/js/jquery-1.11.1.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="/js/ie10-viewport-bug-workaround.js"></script>
-        <script type="text/javascript" src="/js/convert.js"></script>
-        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.11.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="/js/convert.js"></script>
+    <script type="text/javascript" src="/js/infobox.js"></script>
+    <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
     </body>
 </html>

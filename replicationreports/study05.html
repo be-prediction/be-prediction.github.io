@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2005%20-%20Chen%20&%20Chen%20(2011).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>The potential of social identity for equilibrium selection</strong><br>
+                            Chen, R. / Chen, Y. (2011)<br>
+                            American Economic Review, 101(6): 2562-2589</p>
+                        <p>
+                            Replication Authors:<br>
+                            Teck Hua Ho</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">Chen and Chen study effort in a minimum effort game varying whether subjects have a salient ingroup or outgroup identity. They find that effort is higher for those with a salient ingroup identity.</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                Effort in a minimum effort game is higher for subjects with a salient in-group identity than for subjects with a salient outgroup identity (a comparison of mean effort between the &ldquo;Enhanced Ingroup&rdquo; treatment and the &ldquo;Enhanced Outgroup&rdquo; treatment).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is 0.023 (a comparison of the sum of the regression coefficients &ldquo;Ingroup&rdquo; and &ldquo;Ingroup * Enhanced&rdquo; versus &ldquo;Outgroup&rdquo; and &ldquo;Outgroup * Enhanced&rdquo; in the first column in Table 2 and on page 2577 (random effects regression, with clustering at the session level); this tests the difference between the Enhanced Ingroup treatment and the Enhanced Outgroup treatment; in the replication only these two treatment needs to be included and the difference tested with a single treatment dummy): <em>&ldquo;A test that the sum of the coefficients on the ingroup dummy and ingroup-enhanced interaction term is equal to 0 yields p&lt;0.0001 for column 1 and p=0.0005 for column 2, while a test that the previous sum is equal to the corresponding outgroup sum yields p=0.023 for column 1.&rdquo;</em></p>
+                        <p>As this p-value is based on a regression model including more than the two treatments in the replication, we re-estimated the regression model including only the two treatments of the replication. This yielded a p-value of 0.033; based on a chi-square test of the dummy variable for the Enhanced ingroup treatment (the original article also tested the hypothesis with a chi-square test).</p>
+                        <p>The original sample size is 72 participants (36 in the Enhanced Ingroup treatment and 36 in the Enhanced Outgroup treatment). To achieve 90% power the required sample size is 166 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 168 students (i.e., 84 x 2 participants) at the National University of Singapore. There are no exclusion criteria.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original instructions, both available on the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;III.B. Experimental Procedure&rdquo; (pp. 2570–2573) in the original study.</p>
+                        <p>12 subjects in a session are randomly divided into two groups. Each subject randomly chooses an envelope which contains a red or a green index card with a subject ID number on it. Each subject is assigned to the red or the green group based on this index card; each group has 6 members.</p>
+                        <p>Subjects are then given five minutes to review five pairs of paintings, each of which contains one painting by Paul Klee and one painting by Wassily Kandinsky. Subjects are then shown two final paintings and are told that each of them was painted by either Klee or Kandinsky, and that they both could have been painted by the same artist. The subjects are asked to determine, within ten minutes, which artist painted each of these final two paintings. Each subject is allowed to use an online communication program to discuss the problem with other members of her own group. A subject is not required to give answers that conform to any decision reached by her group, and she is not required to contribute to the discussion. For each correct answer, a subject earns 350 tokens (the equivalent of \$1), though she is not told what the correct responses are until the end of the experiment.</p>
+                        <p>Each subject then plays a minimum-effort game for 50 rounds. For each round, each subject is randomly rematched with one other subject in the same session. In the Enhanced Ingroup treatment subjects are matched only with members of their own group, and in the Enhanced Outgroup treatment subjects are matched only with members of the other group.</p>
+                        <p>At the end of the experiment subjects fill out a post experimental survey which contains questions about demographics, past giving behaviour, strategies used during the experiment, group affiliation, and prior knowledge about the artists and paintings.</p>
+                        <p>In the original study, the experiment was carried out in groups of 12 subjects per session. We will include one group of 12 subjects from each of the two treatments in each session (i.e. 24 subjects per session and 168 subjects in total). Subjects will be randomly allocated to the two treatments within each session.</p>
+                        <p>After all rounds have been played, subjects will be privately paid in cash using the same show-up fee (\$5) and incentives as in the original study (average earnings were \$11.69 per subject in the original study).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article using the random effects regression specification without demographic variables included.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. This replication will be performed at the National University of Singapore in Singapore, in 2015, on students from the National University of Singapore, while the original data was gathered at the University of Michigan in Ann Arbor, USA, in 2007-2008, on students from the University of Michigan (plus one student from Eastern Michigan University and one non-student). The experiment will be in English as in the original study.</p>
+                        <p>The original study includes a control treatment and also three &ldquo;Near-minimal&rdquo; treatments: for the replication the focus is only on the difference between the Enhanced Ingroup treatment and the Enhanced Outgroup treatment so only these two treatments will be included.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

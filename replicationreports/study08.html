@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2008%20-%20Dulleck%20et%20al%20(2011).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>The economics of credence goods:<br>
+                                An experiment on the role of liability, verifiability, reputation and competition</strong><br>
+                            Dulleck, U. / Kerschbamer, R. / Sutter, M. (2011)<br>
+                            American Economic Review, 101(2), 526-555</p>
+                        <p>
+                            Replication Authors:<br>
+                            Anna Dreber, Siri Isaksson and Magnus Johannesson</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">Dulleck et al. study the determinants for efficiency in markets for credence goods. Liability increases efficiency in a situation with verifiability compared to when there is only verifiability. The paper studies a number of treatments besides these two. We randomly picked between comparing &ldquo;liability/verifiability&rdquo; vs &ldquo;no liability/verifiability&rdquo; and &ldquo;liability/no verifiability&rdquo; vs &ldquo;no liability/no verifiability&rdquo; and ended up with &ldquo;liability/verifiability&rdquo; vs &ldquo;no liability/verifiability&rdquo;.</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                In a situation with verifiability, liability increases efficiency in a credence goods market (a comparison of efficiency between the B/LV treatment (liability/verifiability) and the B/V treatment (no liability/verifiability).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as p&lt;0.05; we estimated the exact p-value based on the posted data which is p=0.0001 (Wilcoxon-Mann-Whitney test with matching groups of 8 subjects as one independent observation; Table 3, p. 540).</p>
+                        <p>The original sample size is 168 participants (80 in the B/LV treatment and 88 in the B/V treatment). To achieve 90% power the required sample size is 117 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 128 students (8 sessions à 2 groups of 8 participants each) at the Goethe University Frankfurt in Germany. We will recruit students who are Bachelor students in business administration and/or economics, and if needed the recruitment will be extended to firstly masters students in economics and/or business and secondly to bachelor students in other fields. Individuals that have participated in other market experiments will be excluded. The original study included undergraduate students but gives no information about the fields of the undergraduate students included.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in zTree) along with the original German instructions which have been made available at the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;III. Experimental Design and Predictions&rdquo; (pp. 533–535) in the original study.</p>
+                        <p>All sessions will start with an extensive description of the game. Subjects will learn about all parameters as well as the matching procedure by reading instructions privately. Before the start of an experimental session, participants will have to answer a set of control questions correctly to ensure that they had fully understood the instructions. If some participant does not get all questions right, this person will be informed about this, but specific mistakes will not be pointed out. If this person gets all questions right after a second try, he or she will be admitted to the main experiment. For every session we will invite four subjects more than needed in order to make sure that we got enough subjects answering all questions correctly. Once the number of subjects required to start a session have answered all questions correctly, the four remaining subjects will be paid €4 and will be dismissed.</p>
+                        <p>The stage game will be repeated for 16 periods. For each of the two treatments (B/V and B/LV) we will use matching groups of 8 subjects each, which is common knowledge. Four subjects in each matching group are in the role of consumers, and four in the role of sellers. Subjects are assigned roles randomly at the beginning of the experiment, and the roles are fixed throughout the entire experiment.</p>
+                        <p>Subjects will be randomly allocated to the two treatments. In each session we will include one group of 8 subjects from each of the two treatments (i.e. 16 subjects per session), and subjects will be randomly assigned to each treatment within each session.  </p>
+                        <p>As in the original study we will pay participants privately at the end of the experiment using the same show-up fee and incentives as in the original study. Subjects who complete the experiment will be paid €6 for their participation, on top of which they will receive their individual earnings from the experiment. On average earnings amounted to €14 in the original experiment.</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article using a Wilcoxon-Mann-Whitney test with matching groups of 8 subjects as one independent observation for pairwise differences between the two treatments.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some exceptions. In the original study the treatment was not varied within sessions, whereas we will randomly allocate subjects to the two treatments within each session. As we plan to include one group from each treatment in each session the instructions will not be read aloud as in the original study (as the instructions will differ between the two treatments). The location and subject pool of the experiments also differ. This replication will be performed at the Goethe University Frankfurt, in 2015. We will recruit students who are Bachelor students in business administration and/or economics, and if needed the recruitment will be extended to firstly masters students in economics and/or business and secondly to bachelor students in other fields. Individuals that have participated in other market experiments will be excluded. The original data was gathered at the University of Innsbruck, Austria, in 2009, on undergraduate students from the University of Innsbruck (no information about the fields of the undergraduate students are given in the original article). The experiment will be in German as in the original study.</p>
+                        <p>The paper studies a number of treatments: for the replication the focus is only on the comparison between the B/LV treatment and the B/V treatment. As no participants in the original experiment participated in more than one session and treatment this should make no difference.</p>
+                        <p>The original experiment ran 3 sessions in which 2-4 groups of 8 participants played one of the two treatments. We will include 2 groups per session, with one group from each treatment.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

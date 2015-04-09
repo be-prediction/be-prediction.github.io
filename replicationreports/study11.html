@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2011%20-%20Fudenberg%20et%20al%20(2012).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Slow to anger and fast to forgive: Cooperation in an uncertain world</strong><br>
+                            Fudenberg, D. / Rand, D.G. / Dreber, A. (2012)<br>
+                            American Economic Review, 102(2), 720-749</p>
+                        <p>
+                            Replication Authors:<br>
+                            Colin Camerer, Gidi Nave</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">Fudenberg et al. vary the benefit to cost ratio b/c (the rewards to cooperation) in an indefinitely repeated prisoner’s dilemma with noise (meaning that there is a specific probability that an intended move is changed to the opposite move where the other player can only observe the outcome). Cooperation is found to be higher in the treatment where there are cooperative equilibria (b/c=2) compared to in the treatment where there are no cooperative equilibria (b/c=1.5).</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                Cooperation in a repeated prisoner’s dilemma with noise (a specific probability that an intended move is changed to the opposite move) is higher when there are cooperative equilibria (a comparison in the levels of overall cooperation between the b/c=1.5 and the b/c=2 treatment).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is 0.001 (logistic regression over all decisions with a b/c=1.5 dummy variable (treatment) clustered on both subject and interaction pair; pp 732–733, footnote 31): <em>&ldquo;We see that there is markedly less cooperation when b/c=1.5, both in the first round (1.5 versus 2, p=0.016; 1.5 versus 2.5, p=0.003; 1.5 versus 4, p=0.004) and overall (1.5 versus 2, p=0.001; 1.5 versus 2.5, p&lt;0.001; 1.5 versus 4, p&lt;0.001).&rdquo;</em></p>
+                        <p>The original sample size is 124 participants (72 in the b/c=1.5 treatment and 52 in the b/c=2 treatment). To achieve 90% power the required sample size is 120 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 120 students drawn from the Claremont university  subject pool. There are no exclusion criteria.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original instructions, both available at the journal’s webpage.</p>
+                        <p class="rep-h3">Procedure</p>
+                        <p>We will follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;I. Experimental Design&rdquo; (pp. 723–725) in the original study.</p>
+                        <p>The infinitely repeated game is induced by having a known constant probability that the interaction will continue between two players following each round. We let the continuation probability be δ = 7/8. With probability 1 − δ, the interaction ends and subjects are informed that they have been rematched with a new partner. There is also a known constant error probability that an intended move is changed to the opposite move. Our main conditions use E = 1/8; There are also control conditions with E = 1/16 and E = 0 (the replication will only use E=1/8.) Subjects are informed when their own move was changed (i.e., when they made an error), but not when the other player’s move was changed; they are only notified of the other player’s actual move, not the other’s intended move. Subjects are informed of all of the above in the experimental instructions.</p>
+                        <p>To rematch subjects after the end of each repeated game, we use the turnpike protocol as in Dal Bo (2005). Subjects are divided into two equal-sized groups, A and B. A-subjects only interact with B-subjects and vice versa, so that no subject ever plays twice with another subject, or with a subject who plays with a subject they had played with, so that subjects cannot influence the play of subjects they interacted with in the future. Subjects are informed about this setup.</p>
+                        <p>To implement random game lengths, we pre-generate a sequence of integers t1, t2, …, according to the specified geometric distribution to use in all sessions, such that in each session every first interaction lasts t1 rounds, every second interaction lasts t2 rounds etc. (The replication will use the same interaction game lengths as in the original paper.)</p>
+                        <p>To get the same average number of interactions (11 in b/c=1.5 and 11.5 in b/c=2, respectively) per subject we will include 22 subjects in each session, and run 3 sessions of each treatment (i.e. in total 6 sessions and 132 subjects). Subjects will be randomly allocated to each treatment.<sup>1</sup></p>
+                        <p>After all rounds have been played, subjects will be privately paid in cash based on the sum of their earnings using the same show-up fee (\$10) and incentives as in the original study (average earnings were \$22 per subject in the original study, including earnings of the dictator game). The replication will not include the dictator game and an additional temporal discounting task that were conducted following the prisoner’s dilemma game.</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article, using a logistic regression over all individual decisions, with a b/c value dummy as the independent variable, clustered on both subject and interaction pair.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, except for some unavoidable deviations. This replication will be performed at the Claremont CNS lab subject pool. The original data was gathered at the Harvard Decision Science Laboratory at Harvard University in Cambridge MA, USA, in 2009-2010, on students at Boston-area colleges and universities. The experiment will be in English as in the original study.</p>
+                        <p>The original study also looks at first round cooperation, other benefit to cost ratios and error rates, but the focus of the replication is only on the difference between overall cooperation in b/c=1.5 and b/c=2.</p>
+                        <p>The replication will not include the dictator game and an additional temporal discounting task that were conducted following the prisoner’s dilemma game.</p>
+
+                        <hr>
+                        <p class="footnote"><sup>1</sup> In the original article, there is a dictator game once the repeated prisoner’s dilemma games are over. Since participants were not aware of the dictator game when playing the prisoner’s dilemma, we will not include the dictator game in the replication.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>BE-RP: Prediction Markets</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2012%20-%20Huck%20et%20al%20(2011).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Deferred Compensation in Multiperiod Labor Contracts:<br>
+                                An Experimental Test of Lazear’s Model</strong><br>
+                            Huck, S. / Seltzer, A.J. / Wallace, B. (2011)<br>
+                            American Economic Review, 101(2): 819–843</p>
+                        <p>
+                            Replication Authors:<br>
+                            Colin Camerer, Gidi Nave</p>
+                    </div>
+                    <div class="text-justify">               
+                        <p class="rep-ingress">Huck et al test a (Lazear) labor model of how deferred compensation can increase effort and surplus, if future payments are committed. There are four conditions: Enforcing commitment to pay future wages (FCT), removing commitment (NCT), having computer-generated wage offers (yoked to subject offers in CFT), and providing firm histories to allow reputation-building (RT). CFT does not produce interesting effects and RT is &ldquo;of a more exploratory nature&rdquo;, and hence is not an ideal focus of replication. There is a weak change in social surplus from FCT to NCT. Since a core novelty of the design is whether firm subjects offer deferred compensation, we focus on the values of w2 and w3.</p>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                The ability to pay future deferred compensation increases worker earnings (w2+w3) more when commitment is enforced (FCT) compared to non-enforcement (NCT).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The effect is tested using a Mann-Whitney test comparing ranks of entire-session averages (6 FCT versus 6 NCT). Table 3 (data line 2, comparing data columns 1 and 2) reports the average deferred wages for the two conditions and notes p&lt;0.01. The exact p-value of the deferred wage average (W2+W3) is 0.0039. The original sample size is 120 participants. To achieve 90% power the required sample size is 151 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 160 participants (8 sessions à 20 subjects) from the Nuffield CESS subject pool in Oxford. In the original sample, <em>&ldquo;The subjects in each treatment were students of any field at Royal Holloway and UCL [in UK]&rdquo;</em>.</p>
+                        <p>We will not use any special inclusion or exclusion criteria to match this sample to the original Royal Holloway/UCL sample. After the fact, we will be able to test original and replication sample matches on some demographic variables which need to be gathered to complete the replication.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original instructions, both available at the journal’s webpage.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;II. Experimental Design and Procedures&rdquo; (pp. 824–825) in the original study.</p>
+                        <p>For the two interactive treatments (the FCT and NCT), ten subjects (five workers and five firms) participate in each session. Subjects are assigned the role of firm or worker at the beginning of the experiment and keep their role throughout the session. Each session consists of 20 rounds, with random matching of workers and firms which, in the case of the FCT and the NCT, approximates the nature of one-shot games in each round. We run six sessions for each of the treatments, and thus there are observations for 30 worker players and 30 firm players over 20 rounds for each treatment.</p>
+                        <p>The parameters of the model were set as follows: p = 0.5, CL = 0, CM = 20, CH = 40, I (the outside income of the worker) = 40, ZL = 50, ZM = 100, ZH =140. Wage offers could range between 0 and 120 for each stage of the round.</p>
+                        <p>In addition, for some analyses additional variables will be collected as in the original paper: <em>Test score</em>, the score attained on a pre-experimental quiz, which perhaps captures understanding of the game or speed of calculation; and several personal controls obtained in a post-experiment questionnaire <em>sex</em>, <em>age</em>, <em>study year</em> (undergraduate = 1, 2, 3; masters = 4; PhD = 5, 6, 7), and economics (1 if majoring in economics).</p>
+                        <p>After all rounds have been played, subjects will be paid privately in cash based on the same incentives and using the same show up fee (£4) as in the original study (average earnings were £17.28 + show-up fee for worker players and £16.19 + show-up fee for firm players per subject in the original study).</p>
+
+                        <p class="rep-h3">Analysis</p>
+                        <p>The analysis will be performed exactly as in the original article. Each session will generate an average sum of worker earnings. A Mann-Whitney rank-sum test will be conducted using the session averages from the FCT and NCT conditions.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with some unavoidable deviations. The replication will be performed at Oxford university, while the original data was gathered at Royal Holloway and UCL, UK, in 2002. The experiment will be conducted in English as in the original study.</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>
