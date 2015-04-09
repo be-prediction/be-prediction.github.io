@@ -97,12 +97,22 @@ body {
 
 /* Infobox styling */
 .infobox{
+    margin-bottom: 11px;
     padding-bottom: 5px;
     padding-top: 5px;
     padding-left: 15px;
     background-color: #eee;
     border-color: #aaa;
     color: black;
+}
+
+.example{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.quote{
+    padding: 0 22px 0 22px;
 }
 
 .ingress{

@@ -37,7 +37,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="home"><a href="/">Home</a></li>
-                                                <li class="dropdown">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/repoverview.html">Project overview</a></li>
@@ -53,7 +53,6 @@
                             </ul>
                         </li>
                         <li id="people"><a href="/people.html">People</a></li>
-                        <li id="participate"><a href="/participate.html">Participate</a></li>
                     </ul>
                 </div><!--/.navbar-collapse -->
             </div>
@@ -65,25 +64,121 @@
                 <h1>Trading instructions</h1>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <p>The instructions will be made available after the <a href="participate.html">registration</a> has closed.</p>
-                </div>
-            </div>
-            <hr>
+                <div class="col-md-6 text-block">
+                    <h5>What are the prediction markets for?</h5>
+                    <p>In the prediction markets the traders can give their assessment of whether a result will be replicated or not. For each study, a separate prediction market is run to predict the outcome of the replication. In each market one asset is traded whose payoff depends on whether the result/hypothesis will be replicated or not.</p>
+                    <p>The markets will open for trading on April 15 20:00 CET (Central European Time) and close on April 26 20:00 CET. If you encounter any issues, please <a href="mailto:predictionreplication@hhs.se" target="_blank">contact us</a>.</p>
 
-            <footer>
-                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
-    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
-            </footer>
+                    <h5>How to Access the Prediction Markets</h5>
+                    <p>Once your account is created, you can enter the market by visiting <a href="http://www.replicatescience.com/" target="_blank">http://www.replicatescience.com/</a>.</p>
+
+                    <h5>Privacy</h5>
+                    <p>Once you begin trading in the replication markets system, you have a trader ID. Results from the market system will be identified only by this trader ID and linked to your survey responses. In our analysis we will therefore not be able to identify you personally. Of course, we will keep all data confidential and under no circumstances data will be given to external parties.</p>
+
+                    <h5>Who Can and Cannot trade</h5>
+                    <p>All Replicator Staff &mdash; faculty, research assistants and technical staff who are conducting the replications &mdash; will (a) not be eligible to trade in the markets and also (b) are expected to keep themselves as uninformed as possible about activity in the markets until their own replications have been finished. A statement of how we describe this obligation to Replicator Staff is available <a href="/files/replicationstaffinstructions.pdf" target="_blank">here</a>.</p>
+
+                    <h5>Market Setup</h5>
+                    <p>You can trade on the outcome of each of the 18 replication studies in a web-based market interface. This webpage (<a href="http://www.sciencepredictionmarkets.com/" target="_blank">www.sciencepredictionmarkets.com</a>) provides information on the 18 studies (and the specific hypotheses therein) which are to be replicated.</p>
+                    <p>Your initial endowment is 100 Tokens. You can trade in as many of the 18 markets as you want to. However, any residual Tokens not invested will have no value after markets have closed.</p>
+                    <p>Once you have identified a market (study) that you would like to trade in, click on the corresponding button to access it.</p>
+                    <p>Then you will see two possibilities to trade:
+                    <ul>
+                        <li><strong class="ingress">Increase position by # Tokens:</strong><br>
+                            If you believe that the study will be replicated according to the criteria outlined above, you can invest here.</li>
+                        <li><strong class="ingress">Decrease position by # Tokens:</strong><br>
+                            If you believe that the study will not be replicated according to the criteria outlined above, you can invest here.</li>
+                    </ul>
+                    </p>
+
+                <h5>How Prices are Calculated</h5>
+                <p>For each market a computerized market maker provides liquidity by implementing a logarithmic market scoring rule following Hanson (2007).<sup>*</sup> There are no transaction costs and investments are anonymous to other participants.</p>
+                <p>For each trade you have to “invest” Tokens. Increasing (decreasing) your position with Tokens will move its price up (down). The Tokens invested are translated into shares depending on the market price. If you adjust your existing position in an asset toward zero, Tokens are put back into your Token balance and become available for trading in other assets.</p>
+
+                <div  class="alert alert-info alert-dismissible infobox" role="alert">
+                    <span class="open" onclick="openInfo('#pricemechanisminfo')"><h6>Additional Information on the Price Mechanism<span class="sr-only">Additional Information</span><span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-left:10px"></span></h6></span>
+                    <div id="pricemechanisminfo" style="display:none">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <p>With each transaction the price changes according to an algorithm using net sales ($S$) the market maker has done so far in a market to determine the price for positive holdings as $$p(S)={\e^{S\/b}}/{\e^{S\/b}+1}.$$ Decreasing your position below zero takes place at a price defined as $1-p$, accordingly. (Note that the price for decreasing existing positive holdings is conducted at the price $p$ whereas increasing existing negative holdings is conducted at the price $1-p$.) Parameter $b$ in this formula determines liquidity provided by the market maker and is set to $100$.</p>
+                    </div>
+                </div>
+
+                <p>Shares held in the end award the USD equivalent of 1 Token (\$.50) if the asset is tied to an event that turns out to be true. Click <a href="calculator.html">here</a> for learning more about the market maker and how prices change depending on Tokens invested.</p>
+
+                <div  class="alert alert-info alert-dismissible infobox" role="alert">
+                    <span class="open" onclick="openInfo('#priceinfo')"><h6>Additional Information on Prices<span class="sr-only">Additional Information</span><span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-left:10px"></span></h6></span>
+                    <div id="priceinfo" style="display:none">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <p>The more you invest in an asset, the more its price will move. In contrast to a regular market in which the price is fixed for the whole transaction, each infinitesimal Token investment will change the price of the asset.</p>
+                        <p><span class="example">Example 1:</span><br>
+                            If you increase your position by 10 Tokens there will be an infinite amount of small price changes. Therefore, when you invest 10 Tokens at an initial price of 0.50 you do not get exactly 20 shares, but 19.09, as you bid up the price to 0.55.
+                        </p>
+                        <p><span class="example">Example 2:</span><br>
+                            You decrease your position (initially zero) in a market by 15 Tokens at an initial price of 0.45, which leads to -25.79 share holdings. Your action moves the price of the asset from 0.45 to 0.39.</p>
+                    </div>
+                </div>
+
+                <h5>Information on Your Asset Holdings</h5>
+                <p>You can track all your positions in the table “Trade”. For each asset, you can see the current prices (“Price”), how many shares you hold in a particular asset (“Shares Held”), and the current value of your position in Tokens (“Investment Value”).</p>
+                <p>The investment value of a position is calculated as the number of Tokens you would receive by immediately closing your position in the asset. If you have positive (negative) holdings in an asset and the price goes up, the investment value of your position will increase (decrease). If you have positive (negative) holdings in an asset and the price goes down, the investment value of your position will decrease (increase).</p>
+                <p>Therefore, the investment value of a position is not the same as the expected USD equivalent of your shares after the markets have closed and the replication studies are completed.</p>
+                <div  class="alert alert-info alert-dismissible infobox" role="alert">
+                    <span class="open" onclick="openInfo('#assetinfo')"><h6>Additional Information on Your Asset Holdings<span class="sr-only">Additional Information</span><span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-left:10px"></span></h6></span>
+                    <div id="assetinfo" style="display:none">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <p><span class="example">Example 1:</span><br>
+                            You expect a hypothesis to be replicated and increase your position by 10 Tokens at an initial price of 0.50, moving the price to 0.55 and buying 19.09 shares. Other traders later agree with you and invest another 20 Tokens moving the price further up to 0.63.</p>
+                        <p>The value of your initially invested 10 Tokens therefore increases to 11.59 Tokens.
+                        </p>
+                        <p><span class="example">Example 2:</span><br>
+                            You decrease your position by 15 Tokens at an initial price of 0.52, moving the price to 0.45 and another trader disagrees with you later and increases her position by another 10 Tokens moving the price back up to 0.50, your investment loses in value and drops from 15 to 13.47 Tokens.</p>
+                    </div>
+                </div>
+
+                <h5>How You Earn Money</h5>
+                <p>Remember that all Tokens which are not invested will have no value after the markets have closed. This rule should motivate you to invest actively in assets.</p>
+                <p>All assets will be settled when the replication studies have been completed according to the following rule:<p>
+                <p class="quote">Each asset has a clear event outcome determining its terminal value. If the hypothesis is replicated, you receive 1 Token (corresponding to \$.50) for each positive number of shares you hold, but nothing for negative share holdings. If the hypothesis is not replicated, you receive 1 Token (corresponding to \$.50) for each negative number of shares you hold, but nothing for positive share holdings.</p>
+                <p>Payouts are capped at 200 US-Dollars per subject and will be paid out in November 2015. If a particular replication study is not finished by that time, the financial payoffs from that event will be determined by the market price at the time of market closing.</p>
+                <div  class="alert alert-info alert-dismissible infobox" role="alert">
+                    <span class="open" onclick="openInfo('#payoutinfo')"><h6>Additional Information on Payout<span class="sr-only">Additional Information</span><span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-left:10px"></span></h6></span>
+                    <div id="payoutinfo" style="display:none">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <p>The payout of a position in a certain asset depends on two numbers: the terminal value of the asset, which is either 0 or 1 (depending on the replication outcome) and the number of shares you hold.</p>
+                        <p><span class="example">Example 1:</span> (positive asset holdings)<br>
+                            Assume you hold 50 shares acquired at an average price of 0.57. In total you increased
+your position by 28.50 Tokens in this asset.</p>
+<p>If the hypothesis is replicated, the terminal value of each positive share you hold is 1 Token, equivalent to \$.50. Your payout from the asset is: 50 shares &times; \$0.50 = \$25.</p>
+<p>If the hypothesis is not replicated you receive no payout for positive holdings.</p>
+
+                        <p><span class="example">Example 2:</span> (negative asset holdings)<br>
+                            Assume you hold -40 shares acquired at an initial price of .50. In total you decreased
+your position by 22 Tokens in this asset</p>
+<p>If the hypothesis is not replicated, the terminal value of each negative share you hold is 1 Token, equivalent to \$.50. Your payout from the asset is: 40 shares &times; \$0.50 = \$20.</p>
+<p>If the hypothesis is replicated you receive no payout for negative holdings.</p>
+                    </div>
+                </div>
+                <hr>
+                        <p class="footnote"><sup>*</sup> Hanson R. 2007. Logarithmic market scoring rules for modular combinatorial information aggregation. Journal of Prediction Markets 1(1): 3-15.</p>
+
+            </div>
+        </div>
+        <hr>
+
+        <footer>
+            <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+        </footer>
         </div> <!-- /container -->
 
-        <!-- Bootstrap core JavaScript -->
-        <!-- ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="/js/jquery-1.11.1.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="/js/ie10-viewport-bug-workaround.js"></script>
-        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.11.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/infobox.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
     </body>
 </html>

@@ -1,7 +1,7 @@
-function invest() {
+function invest(origin) {
     k = $("#k").val();
     b = $("#b").val();
-    sc = Number($("#sc").val())/100;
+    sc = Number($("#sc").val());
     i = Number($("#i").val());
     investtype = $("input[type='radio'][name='investtype']:checked").attr('id');
     mc = marketchange(i,sc,k,b,investtype);
@@ -24,17 +24,17 @@ function sell(origin) {
     // Calculate initial stuff
     k = $("#k").val();
     b = $("#b").val();
-    sc1 = Number($("#s_sc1").val())/100;
-    $("#p1").text($("#s_sc1").val());
+    sc1 = Number($("#s_sc1").val());
     i = Number($("#s_i").val());
     selltype = $("input[type='radio'][name='selltype']:checked").attr('id');
     mc1 = marketchange(i,sc1,k,b,selltype);
+    $("#p1").text(round(mc1.p1));
     $("#s_sh").text(round(mc1.s)); // Shares held based on initial purchase
     // Don't update current position score if changing certain parameters:
     if (origin!="s_sc2" && origin!="s_ps" && origin!="b" && origin!="k"){
-        $("#s_sc2").val(round(mc1.p2));
+        $("#s_sc2").val(mc1.p2);
     }
-    sc2 = Number($("#s_sc2").val())/100;
+    sc2 = Number($("#s_sc2").val());
     s1 = scoreToNetSales(sc1,b);
     $("#s1").text(round(s1));
     sw = shareWorth(sc2,mc1.s,b,k);
@@ -63,7 +63,7 @@ function riskreduce(){
     invest();
     k = $("#k").val();
     b = $("#b").val();
-    sc = Number($("#r_sc").val())/100;
+    sc = Number($("#r_sc").val());
     s1 = scoreToNetSales(sc,b);
     i = Number($("#r_i").val());
     s = i/k;
@@ -81,7 +81,7 @@ function round(num) {
 }
 
 function marketchange(investment,yesScore,kprm,bprm,position){
-    p1 = yesScore*100;
+    p1 = yesScore;
     s1 = scoreToNetSales(yesScore,bprm);
     if (position=="short"){
         s1 = -s1; // Convert net sales in yes to net sales in no)
@@ -93,16 +93,21 @@ function marketchange(investment,yesScore,kprm,bprm,position){
         s2 = -s2;
     }
     s = s2-s1;
-    p2 = 100 * Math.exp(s2/bprm)/(Math.exp(s2/bprm)+1);
+    p2 = k * Math.exp(s2/bprm)/(Math.exp(s2/bprm)+1);
     p = p2-p1;
-    avgp = Math.abs(100/k*(investment / s));
+    if (position=="short"){
+        avgp = k-Math.abs(investment / s);
+    } else if (position=="long"){
+        avgp = Math.abs(investment / s);
+    }
     return {s1: s1, s2: s2, s: s, p1: p1, p2: p2, p: p, avgp: avgp}
 }
 
 function scoreToNetSales(score,b){
-    netSales = b * Math.log(score/(1-score));
+    k = $("#k").val();
+    netSales = b * Math.log((score/k)/(1-score/k));
     return netSales;
-}
+}   
 
 function netSalesToPoints(s1,s2,b,k){
     points = b * k * (Math.log(1+Math.exp(s2/b))-Math.log(1+Math.exp(s1/b)));
@@ -175,13 +180,24 @@ $(document).ready(function () {
 
 
     $('.input').change(function () {
+        if ("k"==this.id){
+            var k_old = $("#k_old").val();
+            var k = $("#k").val();
+            $("#k_old").val(k);
+            var sc = $("#sc").val();
+            var s_sc1 = $("#s_sc1").val();
+            var s_sc2 = $("#s_sc2").val();
+            $("#sc").val(sc*(k/k_old));
+            $("#s_sc1").val(s_sc1*(k/k_old));
+            $("#s_sc2").val(s_sc2*(k/k_old));
+        }
         selectedType = $('#type').val();
         if (selectedType=="invest"){
-            invest();
+            invest(this.id);
         } else if (selectedType=="sell"){
             sell(this.id);
         } else if (selectedType=="riskreduce"){
-            riskreduce();
+            riskreduce(this.id);
         }
     }); 
 

@@ -53,7 +53,6 @@
                             </ul>
                         </li>
                         <li id="people"><a href="/people.html">People</a></li>
-                        <li id="participate"><a href="/participate.html">Participate</a></li>
                     </ul>
                 </div><!--/.navbar-collapse -->
             </div>
@@ -79,7 +78,7 @@
                             <td>Current price:</td>
                             <td>
                                 <div class="input-group-sm">
-                                    <input id="sc" class="form-control maxInput" type="number" min="0" max ="100" step="0.1" value="50" aria-describedby="basic-addon2">
+                                    <input id="sc" class="form-control maxInput" type="number" min="0" max ="100" step="0.01" value="0.50" aria-describedby="basic-addon2">
                                 </div>
                             </td>
                         </tr>
@@ -110,7 +109,7 @@
                             <td>Price at investment:</td>
                             <td>
                                 <div class="input-group-sm">
-                                    <input id="s_sc1" type="number" min="0" max ="100" step="1" value="50" class="maxInput form-control">
+                                    <input id="s_sc1" type="number" min="0" max ="100" step="0.01" value="0.50" class="maxInput form-control">
                                 </div>
                             </td>
                         </tr>
@@ -139,7 +138,7 @@
                             <td>Current price:</td>
                             <td>
                                 <div class="input-group-sm">
-                                    <input id="s_sc2" type="number" min="0" max ="100" step="1" value="50" class="maxInput form-control">
+                                    <input id="s_sc2" type="number" min="0" max ="100" step="0.01" value="0.50" class="maxInput form-control">
                                 </div>
                             </td> 
                         </tr>
@@ -155,7 +154,7 @@
                                 <div id="priceinfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
                                     <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                     <strong class="ingress">The price</strong> is given by:
-                                    $$p(S)=100·{\e^{S\/b}}/{\e^{S\/b}+1}$$
+                                    $$p(S)=k·{\e^{S\/b}}/{\e^{S\/b}+1}$$
                                     where $S$ are the net sales.
                                 </div>
                             </td>
@@ -163,13 +162,13 @@
                         <tr class="autoWidth">
                             <td><span class="invest">Before investment</span><span class="shareworth">Initial</span>:</td>
                             <td>
-                                <div class="calc-output"><span id="p1">50</span></div>
+                                <div class="calc-output"><span id="p1">0.50</span></div>
                             </td>
                         </tr>
                         <tr class="autoWidth">
                             <td><span class="invest">After investment</span><span class="shareworth">Current</span>:</td>
                             <td>
-                                <div class="calc-output"><span id="p2">50</span></div>
+                                <div class="calc-output"><span id="p2">0.50</span></div>
                             </td>
                         </tr>
                         <tr class="spaceOver">
@@ -178,7 +177,7 @@
                                 <div id="salesinfo" class="alert alert-info alert-dismissible infobox" style="display:none" role="alert">
                                     <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                     <strong class="ingress">The net sales</strong> are defined as shares invested in long, net shares invested in short. They can be solved for by using the price $p$:
-                                    $$S(p)=b·\l\n({p\/100}/{1-p\/100}).$$
+                                    $$S(p)=b·\l\n({p\/k}/{1-p\/k}).$$
                                 </div>
                             </td>
                         </tr>              
@@ -266,7 +265,8 @@
             </div>
             <div class="col-md-4 col-sm-12">
                 <h3>About</h3>
-                <p>This &ldquo;calculator&rdquo; allows you to try see how investing or selling tokens at different market situations affects your balance and the market itself. Remember that you start out with 100 tokens.</p>
+                <p>This &ldquo;calculator&rdquo; allows you to investigate how investing or selling tokens at different market situations affects the market. Remember that you start out with 100 Tokens.</p>
+                <p>Note that this is only an attempt to demonstrate the workings of the market, and that any error here does not reflect an error in the actual markets.</p>
                 <p>All calculations are for a market maker based on a logarithmic scoring rule. In the actual markets we use parameters $b=100$ and $k=1$.</p>
                 <h5>Parameters</h5>
                 <table>             
@@ -275,6 +275,7 @@
                         <td>
                             <div class="input-group-sm">
                                 <input id="k" type="number" class="form-control input" min="0" step="1" value="1">
+                                <input id="k_old" type="hidden" class="form-control input" min="0" step="1" value="1">
                             </div>
                         </td> 
                     </tr>
