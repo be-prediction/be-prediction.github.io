@@ -1,5 +1,5 @@
 // set the date we're counting down to
-var target_date = new Date('Apr, 15, 2015 20:00:00').getTime();
+var target_date = new Date(Date.UTC(2015, 3, 15, 20, 0, 0)).getTime();
  
 // variables for time units
 var days, hours, minutes, seconds;
@@ -11,7 +11,7 @@ var countdown = document.getElementById('countdown');
 function updateTimer(){
  
     // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
+    var current_date = Date.now();
     var seconds_left = (target_date - current_date) / 1000;
  
     // do some time calculations
