@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
 
-        <title>BE-RP: Prediction Markets</title>
+        <title>Behavioral Economics Replication Project</title>
 
 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="/stylesheets/market.css">
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <script type="text/javascript" src="/js/email.js"></script>
     </head>
@@ -32,27 +33,32 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                    <a class="navbar-brand" href="/">BE-RP</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="home"><a href="/">Home</a></li>
+                        <li id="replicationreports"><a href="/replicationreports.html">Replication Reports</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Participant materials</li>
                                 <li><a href="/repoverview.html">Project overview</a></li>
                                 <li><a href="/repdetails.html">Project details</a></li>
                                 <li id="studies"><a href="/studies.html">Included studies</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
                                 <li><a href="/instructions.html">Trading instructions</a></li>
                                 <li><a href="/calculator.html">Market calculator</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Surveys</li>
+                                <li><a href="/pre-market-survey.html">Pre-market survey</a></li>
+                                <li><a href="/post-market-survey.html">Post-market survey</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Data and code</li>
+                                <li><a href="/scripts.html">Scripts</a></li>
+                                <li><a download href="/materials/berp_data.zip">Data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
                             </ul>
                         </li>
-                        <li id="people" class="active"><a href="/people.html">People</a></li>
+                        <li class="active" id="people"><a href="/people.html">People</a></li>
                     </ul>
                 </div><!--/.navbar-collapse -->
             </div>
@@ -81,35 +87,6 @@
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
-                            <a href="https://sites.google.com/site/johanalmenberg/" target="_blank">
-                                <img class="media-object" src="/images/Johan_Almenberg.jpg" alt="Johan Almenberg">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Johan Almenberg</h4>
-                            <p>Stockholm, Sweden</p>
-                            <p><script>mail2("johan.almenberg","gmail",0,"","Email")</script> <a href="https://sites.google.com/site/johanalmenberg/" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 profile">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="https://adamaltmejd.se" target="_blank">
-                                <img class="media-object" src="/images/Adam_Altmejd.jpg" alt="Adam Altmejd">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Adam Altmejd</h4>
-                            <p>Graduate Student</p>
-                            <p>Stockholm School of Economics</p>
-                            <p><script>mail2("adam","altmejd.se",3,"","Email")</script> <a href="https://adamaltmejd.se" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 profile">
-                    <div class="media">
-                        <div class="media-left">
                             <a href="http://people.hss.caltech.edu/~camerer/camerer.html" target="_blank">
                                 <img class="media-object" src="/images/Colin_Camerer.jpg" alt="Colin Camerer">
                             </a>
@@ -122,26 +99,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="clearfix visible-lg-block"></div>
-
-                <div class="col-md-6 col-lg-4 profile">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="http://yiling.seas.harvard.edu/" target="_blank">
-                                <img class="media-object" src="/images/Yiling_Chen.jpg" alt="Yiling Chen">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Yiling Chen</h4>
-                            <p>Associate Professor</p>
-                            <p>Harvard University</p>
-                            <p><script>mail2("yiling","seas.harvard",4,"","Email")</script> <a href="http://yiling.seas.harvard.edu/" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clearfix visible-md-block"></div>
 
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
@@ -158,6 +115,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
@@ -179,21 +137,6 @@
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
-                            <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=34421033" target="_blank">
-                                <img class="media-object" src="/images/Emma_Heikensten.jpg" alt="Emma Heikensten">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Emma Heikensten</h4>
-                            <p>Graduate Student</p>
-                            <p>Stockholm School of Economics</p>
-                            <p><script>mail2("emma.heikensten","phdstudent.hhs",3,"","Email")</script> <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=34421033" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 profile">
-                    <div class="media">
-                        <div class="media-left">
                             <a href="http://facultybio.haas.berkeley.edu/faculty-list/ho-teck" target="_blank">
                                 <img class="media-object" src="/images/ho_teck.jpg" alt="Teck H. Ho">
                             </a>
@@ -206,23 +149,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 profile">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="http://www.uibk.ac.at/ibf/mitarbeiter/holzmeister.html" target="_blank">
-                                <img class="media-object" src="/images/Felix_Holzmeister.jpg" alt="Felix Holzmeister">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Felix Holzmeister</h4>
-                            <p>Graduate Student</p>
-                            <p>University of Innsbruck</p>
-                            <p><script>mail2("felix.holzmeister","uibk",11,"","Email")</script> <a href="http://www.uibk.ac.at/ibf/mitarbeiter/holzmeister.html" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clearfix visible-lg-block"></div>
 
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
@@ -240,23 +166,6 @@
                     </div>
                 </div>
 
-                <div class="clearfix visible-md-block"></div>
-
-                <div class="col-md-6 col-lg-4 profile">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=31631033" target="_blank">
-                                <img class="media-object" src="/images/Siri_Isaksson.jpg" alt="Siri Isaksson">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Siri Isaksson</h4>
-                            <p>Graduate Student</p>
-                            <p>Stockholm School of Economics</p>
-                            <p><script>mail2("siri.isaksson","phdstudent.hhs",3,"","Email")</script> <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=31631033" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
@@ -290,6 +199,124 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="https://sites.google.com/site/johanalmenberg/" target="_blank">
+                                <img class="media-object" src="/images/Johan_Almenberg.jpg" alt="Johan Almenberg">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Johan Almenberg</h4>
+                            <p>Stockholm, Sweden</p>
+                            <p><script>mail2("johan.almenberg","gmail",0,"","Email")</script> <a href="https://sites.google.com/site/johanalmenberg/" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="https://adamaltmejd.se" target="_blank">
+                                <img class="media-object" src="/images/Adam_Altmejd.jpg" alt="Adam Altmejd">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Adam Altmejd</h4>
+                            <p>Graduate Student</p>
+                            <p>Stockholm School of Economics</p>
+                            <p><script>mail2("adam","altmejd.se",3,"","Email")</script> <a href="https://adamaltmejd.se" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-md-block"></div>
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=34421033" target="_blank">
+                                <img class="media-object" src="/images/Taizan_Chan.jpg" alt="Taizan Chan">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Taizan Chan</h4>
+                            <p>Senior Lecturer</p>
+                            <p>Queensland University of Technology</p>
+                            <p><script>mail2("t.chan","qut.edu",5,"","Email")</script> <a href="http://staff.qut.edu.au/staff/chant/" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=34421033" target="_blank">
+                                <img class="media-object" src="/images/Emma_Heikensten.jpg" alt="Emma Heikensten">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Emma Heikensten</h4>
+                            <p>Graduate Student</p>
+                            <p>Stockholm School of Economics</p>
+                            <p><script>mail2("emma.heikensten","phdstudent.hhs",2,"","Email")</script> <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=34421033" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="http://www.uibk.ac.at/ibf/mitarbeiter/holzmeister.html" target="_blank">
+                                <img class="media-object" src="/images/Felix_Holzmeister.jpg" alt="Felix Holzmeister">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Felix Holzmeister</h4>
+                            <p>Graduate Student</p>
+                            <p>University of Innsbruck</p>
+                            <p><script>mail2("felix.holzmeister","uibk",11,"","Email")</script> <a href="http://www.uibk.ac.at/ibf/mitarbeiter/holzmeister.html" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-lg-block"></div>
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=31631033" target="_blank">
+                                <img class="media-object" src="/images/Taisuke_Imai.jpg" alt="Taisuke Imai">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Taisuke Imai</h4>
+                            <p>Graduate Student</p>
+                            <p>California Institute of Technology</p>
+                            <p><script>mail2("timai","caltech",4,"","Email")</script> <a href="https://www.hss.caltech.edu/content/taisuke-imai" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 profile">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=31631033" target="_blank">
+                                <img class="media-object" src="/images/Siri_Isaksson.jpg" alt="Siri Isaksson">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Siri Isaksson</h4>
+                            <p>Graduate Student</p>
+                            <p>Stockholm School of Economics</p>
+                            <p><script>mail2("siri.isaksson","phdstudent.hhs",3,"","Email")</script> <a href="http://www.hhs.se/en/Research/Departments/DE/people/faculty-and-staff---de/?personId=31631033" target="_blank" class="btn btn-default btn-xs" role="button">Web page</a></p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
@@ -305,6 +332,9 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="clearfix visible-lg-block"></div>
+
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
@@ -321,8 +351,6 @@
                     </div>
                 </div>
 
-                <div class="clearfix visible-lg-block"></div>
-
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
@@ -338,6 +366,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4 profile">
                     <div class="media">
                         <div class="media-left">
@@ -358,7 +387,7 @@
             <hr>
 
             <footer>
-                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                <p><i class="fa fa-copyright"></i> <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
                     text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
             </footer>
         </div> <!-- /container -->
