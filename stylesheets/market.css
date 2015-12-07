@@ -21,11 +21,11 @@
 }
 
 
-input[disabled] {
+.calc-input input[disabled] {
     border: 0;
     font-size: 14px;
     width: 50px !important;
-    
+
 }
 
 .disabled-addon{
@@ -39,12 +39,12 @@ input[disabled] {
     cursor: pointer;
 }
 
-table{
+.calc-table{
     width: 100%;
 }
 
 
-input{
+.calc-input{
     width: 75px !important;
     padding: 0 0 0 5px;
     margin: 0 0 0 10px;
@@ -63,7 +63,7 @@ input{
 }
 
 .input-group{
-    width: 150px;   
+    width: 150px;
 }
 
 .input-group-addon{

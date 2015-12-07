@@ -37,7 +37,7 @@ body {
         padding-bottom: 10px;
     }
     /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
+    .navbar-collapse.collapse.in {
         display: block!important;
     }
     .collapsing {
@@ -121,5 +121,94 @@ body {
 
 .infobox h6{
     margin-top: 7px;
-    margin-bottom: 7px; 
+    margin-bottom: 7px;
+}
+
+/* Replication report table styling */
+.latextable{
+    margin-top: 33px;
+    margin-left: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+
+.caption>tr:nth-child(1)>th{
+    border: 0 !important;
+    font-weight: normal;
+    padding: 0 0 8px 0;
+}
+.caption>tr:nth-child(2)>th{
+    border-top: 0 !important;
+    border-bottom: 2px solid;
+    text-align: center !important;
+}
+
+.latextable tbody tr td:first-child{
+    text-align: left !important;
+}
+
+.latextable tbody tr:last-child{
+    border-bottom: 2px solid;
+    margin-bottom: 6px !important;
+}
+
+.latextable .separator td{
+    border-top: 1px solid;
+}
+
+.latextable tfoot{
+    text-align: left;
+    font-size: 12px;
+
+}
+
+.latextable tfoot tr:first-child td{
+    padding-top: 12px !important;
+}
+
+.latextable tfoot tr td{
+    padding: 0px !important;
+    border: 0 !important;
+}
+
+/* Survey styles */
+.radio-table{
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+}
+
+.radio-table td{
+    padding: 3px;
+}
+
+/* Script well styles */
+.script-container{
+    height: 350px;
+}
+
+.script{
+    font-family: monospace;
+    background-color:white;
+    height: 350px;
+    font-size:12px;
+    overflow: scroll;
+    margin-bottom:19px;
+}
+.script.last{
+    margin-bottom:0;
+}
+
+/* Replication reports */
+.nav-link .fa{
+    font-size: 85%;
+    padding-bottom: 5px;
+    display: inline-table;
+    vertical-align: bottom;
+}
+
+.replication-buttons .btn{
+    margin-bottom:6px;
+}
 }
