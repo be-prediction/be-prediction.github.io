@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
 
-        <title>BE-RP: Prediction Markets</title>
+        <title>Behavioral Economics Replication Project</title>
 
 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="/stylesheets/market.css">
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
     </head>
@@ -32,27 +33,31 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                    <a class="navbar-brand" href="/">BE-RP</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="home"><a href="/">Home</a></li>
+                        <li id="replicationreports"><a href="/replicationreports.html">Replication Reports</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Participant materials</li>
                                 <li><a href="/repoverview.html">Project overview</a></li>
                                 <li><a href="/repdetails.html">Project details</a></li>
                                 <li id="studies"><a href="/studies.html">Included studies</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
                                 <li><a href="/instructions.html">Trading instructions</a></li>
                                 <li><a href="/calculator.html">Market calculator</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Surveys</li>
+                                <li><a href="/pre-market-survey.html">Pre-market survey</a></li>
+                                <li><a href="/post-market-survey.html">Post-market survey</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Data and code</li>
+                                <li><a href="/scripts.html">Scripts</a></li>
+                                <li><a download href="/materials/berp_data.zip">Data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
                             </ul>
                         </li>
-                        <li id="people"><a href="/people.html">People</a></li>
                     </ul>
                 </div><!--/.navbar-collapse -->
             </div>
@@ -64,10 +69,10 @@
             <div class="row rep-top">
                 <div class="col-md-8 col-lg-6">
                     <div style="float:left">
-                        <a href="/studies.html" class="nav-link"><h5><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Back</h5></a>
+                        <a href="/studies.html" class="nav-link"><h5><i class="fa fa-arrow-left"></i> Back</h5></a>
                     </div>
                     <div style="float:right">
-                        <a href="Study%2018%20-%20Marzilli%20Ericson%20&%20Fuster%20(2011).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Download .pdf</button></a>
+                        <a href="Study%2018%20-%20Marzilli%20Ericson%20&%20Fuster%20(2011).pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Download .pdf</button></a>
                     </div>
                 </div>
             </div>
@@ -82,7 +87,7 @@
                             Replication Authors:<br>
                             Anna Dreber, Emma Heikensten and Magnus Johannesson</p>
                     </div>
-                    <div class="text-justify">               
+                    <div class="text-justify">
                         <p class="rep-ingress">In a valuation experiment, Ericson and Fuster randomize subjects to a high or low probability of obtaining an item (a mug) and elicit their willingness-to-accept it. They find that the high probability treatment increases the valuation of the item. The paper includes two experiments where other things are also tested. Experiment 2 was chosen as it was the last experiment.</p>
 
                         <div class="panel panel-default">
@@ -118,7 +123,7 @@
                     <p>After the subjects have made their decision and the die has been rolled (for each subject individually), subjects will be privately paid in cash using the same show-up fee (\$10) as in the original study.</p>
 
                     <p class="rep-h3">Analysis</p>
-                    <p>The analysis will be performed exactly as in the original article. That is, the mug/money choices for the different amounts of money give a measure of each subject’s willingness-to-accept (WTAmug) for the mug. Similarly, the pen/money choices give the WTA for the pen (WTApen). For the analysis we estimate the difference between ln(WTAmug) and ln(WTApen) for each subject (diff_i). As in the original paper we test if this variable (diff_i) is significantly different between the two treatments using a t-test. </p>  
+                    <p>The analysis will be performed exactly as in the original article. That is, the mug/money choices for the different amounts of money give a measure of each subject’s willingness-to-accept (WTAmug) for the mug. Similarly, the pen/money choices give the WTA for the pen (WTApen). For the analysis we estimate the difference between ln(WTAmug) and ln(WTApen) for each subject (diff_i). As in the original paper we test if this variable (diff_i) is significantly different between the two treatments using a t-test. </p>
                     <p>In the original article the mean of diff_i was 0.33 for subjects in the MH treatment and 0.01 for subjects in the ML treatment. This difference was statistically significant with a p-value corresponding to 0.03 when estimated with a t-test.  Since Ericson and Fuster used ln(WTA) subjects that indicated a \$0 WTA for either the mug or the pen were dropped. There were three such subjects in ML and five in MH (two of which indicate a \$0 WTA for both items). We will do the test in exactly the same way and therefore also exclude subjects with a zero WTO for the mug or the pen.</p>
 
                     <p class="rep-h3">Differences from Original Study</p>
@@ -132,7 +137,7 @@
         <hr>
 
         <footer>
-            <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+            <p><i class="fa fa-copyright"></i> <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
                 text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
         </footer>
         </div> <!-- /container -->
