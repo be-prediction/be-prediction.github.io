@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
 
-        <title>BE-RP: Prediction Markets</title>
+        <title>Behavioral Economics Replication Project</title>
 
 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="/stylesheets/market.css">
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
     </head>
@@ -32,24 +33,29 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                    <a class="navbar-brand" href="/">BE-RP</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="home"><a href="/">Home</a></li>
+                        <li id="replicationreports"><a href="/replicationreports.html">Replication Reports</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Participant materials</li>
                                 <li><a href="/repoverview.html">Project overview</a></li>
                                 <li class="active"><a href="/repdetails.html">Project details</a></li>
                                 <li id="studies"><a href="/studies.html">Included studies</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
                                 <li><a href="/instructions.html">Trading instructions</a></li>
                                 <li><a href="/calculator.html">Market calculator</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Surveys</li>
+                                <li><a href="/pre-market-survey.html">Pre-market survey</a></li>
+                                <li><a href="/post-market-survey.html">Post-market survey</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Data and code</li>
+                                <li><a href="/scripts.html">Scripts</a></li>
+                                <li><a download href="/materials/berp_data.zip">Data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
                             </ul>
                         </li>
                         <li id="people"><a href="/people.html">People</a></li>
@@ -62,6 +68,7 @@
             <!-- Example row of columns -->
             <div class="page-header">
                 <h1>Project details</h1>
+                <h6>(As shown to the participants before the markets opened.)</h6>
             </div>
             <div class="row">
                 <div class="col-md-6 text-block">
@@ -84,7 +91,7 @@
                     <span class="open" onclick="openInfo('#salesinfo')"><h6>Additional Background Information on the Replicated Studies<span class="sr-only">Additional Information</span><span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-left:10px"></span></h6></span>
                     <div id="salesinfo" style="display:none">
                         <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <p>Note that three of the studies (Kogan et al; Kuziemko et al; Marzilli Ericson and Fuster) included two separate experiments/studies which appear to have the same importance, as expressed by the authors' descriptions of their findings. These are clearly labeled as separate experiments rather than, for instance, as robustness tests of an initial central experiment. For these studies we included the second experiment and then applied criteria 1-3 above. The criteria of replicating the last experiment in papers which report a series of experiments has previously been used in the <a href="https://osf.io/ezcuj/" target="_blank">Open Science Framework Replication Project: Psychology</a>.</p> 
+                        <p>Note that three of the studies (Kogan et al; Kuziemko et al; Marzilli Ericson and Fuster) included two separate experiments/studies which appear to have the same importance, as expressed by the authors' descriptions of their findings. These are clearly labeled as separate experiments rather than, for instance, as robustness tests of an initial central experiment. For these studies we included the second experiment and then applied criteria 1-3 above. The criteria of replicating the last experiment in papers which report a series of experiments has previously been used in the <a href="https://osf.io/ezcuj/" target="_blank">Open Science Framework Replication Project: Psychology</a>.</p>
 
                         <p>For the following studies we randomly picked the hypothesis according to criterion 3:
                         <ul>
@@ -100,10 +107,10 @@
 
             <h5>What does it mean for a study to replicate?</h5>
             <p>Of course, prediction market design requires that event outcomes can be clearly said to have either occurred or not. Therefore, we define a result as being replicated if the statistical method used in the original paper yields a p-value &lt;0.05. A result is not replicated if the corresponding p-value is &gt;0.05.</p>
-            
+
             <h5>How were sample sizes chosen?</h5>
             <p>All planned sample sizes were chosen so that if the replication produces an effect of the same strength as in the original study, the probability of p&lt;0.05 in the replication is 90% (the tests have 90% power). In some cases, larger samples than those with 90% power were chosen because the lowest multiple of the typical original session size was somewhat above the 90% power sample.</p>
-            
+
             <h5>How can we find out details of the replication procedure and test statistics?</h5>
             <p>Obviously, perfect replication is impossible. Therefore, our approach is to make every feasible effort to replicate all aspects of the design, software, and analysis as closely as possible (with the exception, in most cases, of different subject pools). Furthermore, we will be transparent about details of how the replications will take place. To this end, brief “replication reports” are available to market participants which describe the hypotheses and relevant differences between the original design and the planned replication. For more information on the replicated studies and the hypotheses see the &ldquo;<a href="/studies.html">Included studies</a>&rdquo; page.</p>
         </div>
@@ -111,7 +118,7 @@
     <hr>
 
     <footer>
-        <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+        <p><i class="fa fa-copyright"></i> <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
             text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
     </footer>
     </div> <!-- /container -->
