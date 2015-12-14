@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
 
-        <title>Behavioral Economics Replication Project</title>
+        <title>Experimental Economics Replication Project</title>
 
 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">BE-RP</a>
+                    <a class="navbar-brand" href="/">EE-RP</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -55,7 +55,7 @@
                                 <li role="separator" class="divider"></li>
                                 <li role="presentation" class="dropdown-header">Data and code</li>
                                 <li class="active"><a href="/scripts.html">Scripts</a></li>
-                                <li><a download href="/materials/berp_data.zip">Market data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
+                                <li><a download href="/materials/marketdata.zip">Market data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
                             </ul>
                         </li>
                         <li id="people"><a href="/people.html">People</a></li>
@@ -82,6 +82,23 @@
                                 <div class="col-md-12">
                                     <div style="float:left">
                                         <h5>Master</h5>
+                                    </div>
+                                    <div style="float:right">
+                                        <a href="" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Download</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <pre class="script"></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="create_studydetails">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="float:left">
+                                        <h5>Create studydetails</h5>
                                     </div>
                                     <div style="float:right">
                                         <a href="" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Download</button></a>
@@ -159,7 +176,24 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div style="float:left">
-                                        <h5>Function module</h5>
+                                        <h5>Functions</h5>
+                                    </div>
+                                    <div style="float:right">
+                                        <a href="" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Download</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <pre class="script"></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pwr_r_test">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="float:left">
+                                        <h5>r-power</h5>
                                     </div>
                                     <div style="float:right">
                                         <a href="" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Download</button></a>
@@ -205,14 +239,9 @@
 <!-- ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/js/jquery-1.11.1.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/infobox.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/js/ie10-viewport-bug-workaround.js"></script>
-<script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
 <script type="text/javascript">
     window.onload = function() {
-        var scripts = [["effectstandardization",".py"],["effectdata",".py"],["master",".do"],["create_data",".do"],["analysis",".do"],["tables_graphs",".do"]];
+        var scripts = [["effectstandardization",".py"],["effectdata",".py"],["pwr_r_test",".py"],["master",".do"],["create_studydetails",".do"],["create_data",".do"],["analysis",".do"],["tables_graphs",".do"]];
         var numscripts = scripts.length;
         for (var i = 0; i < numscripts; i++) {
             var id = "#" + scripts[i][0];
@@ -221,7 +250,11 @@
             $(id).find(".nav-link").attr("href", link);
         };
     };
-
 </script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/infobox.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
 </body>
 </html>

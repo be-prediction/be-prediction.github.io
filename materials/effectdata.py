@@ -1,5 +1,4 @@
-from scipy.stats import t
-from scipy.stats import norm
+from scipy.stats import t, norm
 import sys
 sys.path.insert(0, '/Users/es.3386/Google Drive/Doktorand/Behavioral pred. markets/Effect standardization')
 from effectstandardization import *
@@ -324,9 +323,9 @@ study18 = Study("Study 18 - Ericson & Fuster 2011", orig18, rep18, metaeffect(or
 STUDIES[18] = study18
 
 # Print all:
-for study in STUDIES:
-    if study is not None:
-        print "\n\n"
-        print study
+# for study in STUDIES:
+#     if study is not None:
+#         print "\n\n"
+#         print study
 
 stataformatstudies(STUDIES)

@@ -10,11 +10,11 @@ use "../use/marketsurveysummary.dta", clear
 // Fig 1a. Replication results 95% confidence intervals of normalized standardized replication
 // effectsizes (correlation coefficient r).
 preserve 
-	collapse ref ereprel ereprell ereprelu, by(study)
+	collapse ref ereprel ereprell95 ereprelu95, by(study)
 	sort ref
 	gen order = 19-_n
-	gen errorl = abs(ereprell-ereprel)
-	gen erroru = abs(ereprel-ereprelu)
+	gen errorl = abs(ereprell95-ereprel)
+	gen erroru = abs(ereprel-ereprelu95)
 	// Update labels:
 	forval s=1/18{
 		local name: label study `s'
@@ -23,7 +23,7 @@ preserve
 		local newname = subinstr(subinstr("`name'", " (", ", ", .), ")", "", .) + " (`ref')"
 		label define study `s' "`newname'", modify
 	}
-	drop ereprel? ref
+	drop ereprel??? ref
 	outsheet using "../graphs/fig-1a.csv", replace noquote delimiter(";")
 restore
 
@@ -31,12 +31,12 @@ restore
 // Fig 1b. Normalized meta-analytic estimates of effect sizes combining the original and replication studies. 
 // 95% confidence intervals of standardized effect sizes (correlation coefficient r).
 preserve 
-	collapse ref emetarel emetarell emetarelu, by(study)
-	drop if emetarel==.
+	collapse ref emetarel emetarell95 emetarelu95, by(study)
+	drop if emetarell95==.
 	sort ref
 	gen order = 19-_n
-	gen errorl = abs(emetarell-emetarel)
-	gen erroru = abs(emetarel-emetarelu)
+	gen errorl = abs(emetarel-emetarell95)
+	gen erroru = abs(emetarelu95-emetarel)
 	// Update labels:
 	forval s=1/18{
 		local name: label study `s'
@@ -45,7 +45,7 @@ preserve
 		local newname = subinstr(subinstr("`name'", " (", ", ", .), ")", "", .) + " (`ref')"
 		label define study `s' "`newname'", modify
 	}
-	drop emetarel? ref
+	drop emetarel?95 ref
 	outsheet using "../graphs/fig-1b.csv", replace noquote delimiter(";")
 restore
 
@@ -65,12 +65,11 @@ restore
 // and the original sample size and different reproducibility indicators.
 preserve
 	keep if active==1
-	collapse result eorig erep emeta erepl erepu emetal emetau endprice preqrep porig norig, by(study)
+	collapse result eorig erep emeta erepl95 erepu95 emetal95 emetau95 endprice preqrep porig norig, by(study)
 	
 	sum result // Replicated with P<0.05 in original direction
-	gen originrepci = (eorig>=erepl & eorig<=erepu) // Original effect size within replication 95% CI
-	*replace originrepci = 1 if erepl>0 & erepl>eorig
-	gen metasig = (emetal>0) // Meta-analytic estimate significant in the original direction
+	gen originrepci = (eorig>=erepl95 & eorig<=erepu95) // Original effect size within replication 95% CI
+	gen metasig = (emetal95>0) // Meta-analytic estimate significant in the original direction
 	gen rele = erep/eorig // Replication effect-size (% of original effect size)
 	sum endprice // Prediction markets beliefs about replication
 	sum preqrep // Survey beliefs about replication
@@ -110,12 +109,12 @@ preserve
 		replace `var' = "*" if `var'=="1"
 		replace `var' = "**" if `var'=="2"
 	}
-	
+		
 	label def measurename 1 "Replicated P$<$0.05" ///
 	2 "Original within 95\% CI" ///
 	3 "Meta-estimate P$<$0.05" ///
 	4 "Relative effect size" ///
-	5 "Prediction markets beliefs" ///
+	5 "Prediction market beliefs" ///
 	6 "Survey beliefs"
 	gen measure = _n
 	label values measure measurename
@@ -173,9 +172,8 @@ use "../use/marketsurveysummary.dta", clear
 	/// [33b] Original effect size within replication 95% CI
 	preserve
 		keep if active==1
-		collapse eorig erepl erepu, by(study)
-		gen originrepci = (eorig>=erepl & eorig<=erepu)
-		*replace originrepci = 1 if erepl>0 & erepl>eorig
+		collapse eorig erepl95 erepu95, by(study)
+		gen originrepci = (eorig>=erepl95 & eorig<=erepu95)
 		sum originrepci
 		local e = r(mean)
 		local eN = r(N)
@@ -198,8 +196,8 @@ use "../use/marketsurveysummary.dta", clear
 	/// [33c] Meta-analytic estimate significant in the original direction
 	preserve
 		keep if active==1
-		collapse emetal, by(study)
-		gen metasig = (emetal>0)
+		collapse emetal95, by(study)
+		gen metasig = (emetal95>0)
 		sum metasig
 		local e = r(mean)
 		local eN = r(N)
@@ -367,7 +365,7 @@ use "../use/marketsurveysummary.dta", clear
 	2 "Original within 95\% CI" ///
 	3 "Meta-estimate P$<$0.05" ///
 	4 "Relative effect size" ///
-	5 "Prediction markets beliefs" ///
+	5 "Prediction market beliefs" ///
 	6 "Survey beliefs"
 	gen measure = _n
 	label values measure measurename
@@ -403,7 +401,7 @@ use "../use/marketsurveysummary.dta", clear
 
 // Table S1. Prediction market results for the 18 replication studies
 preserve
-	collapse ref porig eorig prep erep result erel erel_ns, by(study)
+	collapse ref porig eorig norig prep erep nrep_act result erel erel_ns, by(study)
 	sort ref
 	label def result 1 "Yes" 0 "No"
 	label values result result
@@ -444,11 +442,10 @@ restore
 // Table S5.
 preserve
 	keep if active==1
-	collapse result eorig erep emeta erepl erepu emetal emetau endprice preqrep porig norig, by(study)
+	collapse result eorig erep emeta erepl95 erepu95 emetal95 emetau95 endprice preqrep porig norig, by(study)
 
-	gen originrepci = (eorig>=erepl & eorig<=erepu) // Original effect size within replication 95% CI
-	*replace originrepci = 1 if erepl>0 & erepl>eorig
-	gen metasig = (emetal>0) // Meta-analytic estimate significant in the original direction
+	gen originrepci = (eorig>=erepl95 & eorig<=erepu95) // Original effect size within replication 95% CI
+	gen metasig = (emetal95>0) // Meta-analytic estimate significant in the original direction
 	gen rele = erep/eorig // Replication effect-size (% of original effect size)
 	
 	keep result originrepci metasig rele endprice preqrep porig norig

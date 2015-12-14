@@ -1,5 +1,5 @@
 """
-This module contains all relevant functions and classes to standardize
+This module contains relevant functions and classes to standardize
 and combine effect sizes from different statistical tests.
 
 Relevant references are:
@@ -15,6 +15,9 @@ Relevant references are:
 import math
 from scipy.stats import norm
 import numpy
+import sys
+sys.path.insert(0, '/Users/es.3386/Google Drive/Doktorand/Behavioral pred. markets/Effect standardization')
+from pwr_r_test import *
 
 class Study(object):
     def __init__(self, name, original=None, replication=None, meta=None):
@@ -65,8 +68,10 @@ class Effectsize(object):
         self.df2 = None
         self.samplesize = None
         self.rstat = None
-        self.rinterval = None
+        self.rinterval90 = None
+        self.rinterval95 = None
         self.pvalue = None
+        self.e33 = None
 
 
     def settype(self, stattype):
@@ -113,11 +118,17 @@ class Effectsize(object):
     def getr(self):
         return self.rstat
 
-    def getrinterval(self):
-        return self.rinterval
+    def getrinterval90(self):
+        return self.rinterval90
+
+    def getrinterval95(self):
+        return self.rinterval95
 
     def getpval(self):
         return self.pvalue
+
+    def gete33(self):
+        return self.e33
 
     def getvalidtypes(self):
         return self.validtypes
@@ -134,8 +145,10 @@ class Effectsize(object):
         elif self.stattype == 'Z':
             self.rstat = ztor(self.stat, self.samplesize)
 
-        self.rinterval = rconfint(self.rstat, self.samplesize)
+        self.rinterval95 = rconfint(self.rstat, self.samplesize, 0.95)
+        self.rinterval90 = rconfint(self.rstat, self.samplesize, 0.90)
         self.pvalue = pvalue(self.rstat, self.samplesize)
+        self.e33 = rpower(n=self.samplesize,power=1.0/3)
 
     def __str__(self):
         return "Stat type: " + self.stattype + \
@@ -216,15 +229,16 @@ def chi2tor(stat, samplesize):
         See references 3 & 4. """
     return math.sqrt(stat/samplesize)
 
-def rconfint(stat, samplesize):
+def rconfint(stat, samplesize, width):
     """ Confidence interval around r using the Fisher transformation.
         Expects inputs as floats.
         See reference 3 & 6. """
+    probability = 1-(1-width)/2
     zstat = rtofisherz(stat)
     samplesize = float(samplesize)
     zvar = 1/(samplesize-3)
-    zlower = zstat - norm.ppf(0.975) * math.sqrt(zvar)
-    zupper = zstat + norm.ppf(0.975) * math.sqrt(zvar)
+    zlower = zstat - norm.ppf(probability) * math.sqrt(zvar)
+    zupper = zstat + norm.ppf(probability) * math.sqrt(zvar)
     rinterval = []
     rinterval.append(fisherztor(zlower))
     rinterval.append(fisherztor(zupper))
@@ -253,10 +267,17 @@ def stataformatstudies(studies):
             text = 'meta'
         print "gen e" + type + " = ."
         print "label var e" + type + " \"Effect size of " + text + " study\""
-        print "gen e" + type + "l = ."
-        print "label var e" + type + "l \"Lower bound of 95% interval around " + text + " effect size (r)\""
-        print "gen e" + type + "u = ."
-        print "label var e" + type + "u \"Upper bound of 95% interval around " + text + " effect size (r)\""
+        print "gen e" + type + "l95 = ."
+        print "label var e" + type + "l95 \"Lower bound of 95% interval around " + text + " effect size (r)\""
+        print "gen e" + type + "u95 = ."
+        print "label var e" + type + "u95 \"Upper bound of 95% interval around " + text + " effect size (r)\""
+        print "gen e" + type + "l90 = ."
+        print "label var e" + type + "l90 \"Lower bound of 90% interval around " + text + " effect size (r)\""
+        print "gen e" + type + "u90 = ."
+        print "label var e" + type + "u90 \"Upper bound of 90% interval around " + text + " effect size (r)\""
+        if type == "orig":
+            print "gen e33orig = ."
+            print "label var e33orig \"Effect size (r) that the original study had 33% power to detect\""
     print ""
     i = 0
     for study in studies:
@@ -272,11 +293,12 @@ def stataformatstudies(studies):
             text = 'meta'
         print ""
         print "gen e" + type + "rel=e" + type + "/eorig"
-        print "gen e" + type + "rell=e" + type + "l/eorig"
-        print "gen e" + type + "relu=e" + type + "u/eorig"
+        print "gen e" + type + "rell95=e" + type + "l95/eorig"
+        print "gen e" + type + "relu95=e" + type + "u95/eorig"
         print "label var e" + type + "rel \"Normalized effect size of " + text + " study\""
-        print "label var e" + type + "rell \"Lower bound of 95% interval around normalized " + text + " effect\""
-        print "label var e" + type + "relu \"Upper bound of 95% interval around normalized " + text + " effect\""
+        print "label var e" + type + "rell95 \"Lower bound of 95% interval around normalized " + text + " effect\""
+        print "label var e" + type + "relu95 \"Upper bound of 95% interval around normalized " + text + " effect\""
+
 
 def stataformatstudy(study, number):
     """ Takes a Study object as input """
@@ -296,12 +318,22 @@ def stataformatstudy(study, number):
         if effect[0] is not None:
             print "replace e" + effect[1] + " = " + str(sign * effect[0].getr()) + \
             " if study==" + str(number)
-            print "replace e" + effect[1] + "l = " + \
-            str(sign * effect[0].getrinterval()[lowernum]) + \
+            print "replace e" + effect[1] + "l90 = " + \
+            str(sign * effect[0].getrinterval90()[lowernum]) + \
             " if study==" + str(number)
-            print "replace e" + effect[1] + "u = " + \
-            str(sign * effect[0].getrinterval()[uppernum]) + \
+            print "replace e" + effect[1] + "u90 = " + \
+            str(sign * effect[0].getrinterval90()[uppernum]) + \
             " if study==" + str(number)
+            print "replace e" + effect[1] + "l95 = " + \
+            str(sign * effect[0].getrinterval95()[lowernum]) + \
+            " if study==" + str(number)
+            print "replace e" + effect[1] + "u95 = " + \
+            str(sign * effect[0].getrinterval95()[uppernum]) + \
+            " if study==" + str(number)
+            if effect[1]=='orig':
+                print "replace e33orig = " + \
+                str(effect[0].gete33()) + \
+                " if study==" + str(number)
             print ""
 
 def normalize(effect, normalization):
@@ -311,7 +343,7 @@ def normalize(effect, normalization):
     temp.settype('r')
     temp.setstat(effect.getr()/normalization)
     temp.setr(temp.getstat())
-    interval = effect.getrinterval()
+    interval = effect.getrinterval95()
     interval[0] = interval[0]/normalization
     interval[1] = interval[1]/normalization
     temp.setrinterval(interval)
