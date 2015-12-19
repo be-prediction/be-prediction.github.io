@@ -2,7 +2,7 @@ clear
 set more off
 
 // Set local path to Stata folder here:
-global STATAPATH = "/Users/es.3386/Dropbox/Plugg/Doktorand/Projekt/BERP/Stata/use"
+global STATAPATH = ""
 
 
 cd "${STATAPATH}"
