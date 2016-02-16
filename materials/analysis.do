@@ -271,6 +271,14 @@ preserve
 restore
 
 
+/// Number of replications within 95% prediction interval
+preserve
+	collapse eorigpredl95 eorigpredu95 erep, by(study)
+	gen repinorigpred = (erep>=eorigpredl95 & erep<=eorigpredu95)
+	mean repinorigpred
+restore
+
+
 /// Standardized effect size statistics
 preserve
 	collapse erep eorig erel, by(study)
@@ -336,6 +344,13 @@ preserve
 	collapse result endprice, by(study)
 	qui sum endprice
 	signrank endprice=result //  Wilcoxon matched-pairs signed-ranks test	
+restore
+
+
+/// The Spearman correlation between the original p-value and original sample size
+preserve
+	collapse porig norig, by(study)
+	spearman porig norig, stats(rho p)
 restore
 
 
@@ -636,4 +651,46 @@ preserve
 	local bulls=r(N)
 	display "Bears: " `bears'
 	display "Bulls: " `bulls'
+restore
+
+
+/// Summary statistics of the Spearman correlation between the original p-value 
+/// and the original sample size and different reproducibility indicators when
+/// excluding one study at a time
+preserve
+	keep if active==1
+	collapse result eorig erep emeta erepl95 erepu95 emetal95 emetau95 endprice preqrep porig norig, by(study)
+	
+	sum result // Replicated with P<0.05 in original direction
+	gen originrepci = (eorig>=erepl95 & eorig<=erepu95) // Original effect size within replication 95% CI
+	*replace originrepci = 1 if erepl95>0 & erepl95>eorig
+	gen metasig = (emetal95>0) // Meta-analytic estimate significant in the original direction
+	gen rele = erep/eorig // Replication effect-size (% of original effect size)
+	sum endprice // Prediction markets beliefs about replication
+	sum preqrep // Survey beliefs about replication
+	
+	keep result originrepci metasig rele endprice preqrep porig norig study
+	
+
+	foreach var in result originrepci metasig rele endprice preqrep{
+		capture mat drop porigsummary
+		capture mat drop norigsummary
+		forval s=1/18{
+			qui spearman `var' porig if study!=`s'
+			mat porigsummary = (nullmat(porigsummary) \ [r(rho), r(p), r(N), `s'])
+			qui spearman `var' norig if study!=`s'
+			mat norigsummary = (nullmat(norigsummary) \ [r(rho), r(p), r(N), `s'])
+		}
+		mat colnames porigsummary = rho p n s
+		svmat porigsummary, n(col)
+		display "`var' porig summary:"
+		sum rho p
+		drop rho p n s
+		
+		mat colnames norigsummary = rho p n s
+		svmat norigsummary, n(col)
+		display "`var' norig summary:"
+		sum rho p
+		drop rho p n s
+	}	
 restore

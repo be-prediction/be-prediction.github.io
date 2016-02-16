@@ -484,8 +484,8 @@ preserve
 		replace rho`i' = "("+ rho`i' + ")" if type==2 & rho`i'!=""
 	}
 	
-	label def measures 1 "Replicated P<0.05" 2 "Original within 95<CI" 3 "Meta-estimate P<0.05" ///
-	4 "Relative Effect Size (r)" 5 "Market Belief" 6 "Survey Belief" ///
+	label def measures 1 "Replicated P<0.05" 2 "Original within 95\% CI" 3 "Meta-estimate P<0.05" ///
+	4 "Relative Effect Size (\emph{r})" 5 "Market Belief" 6 "Survey Belief" ///
 	7 "Original p-value" 8 "Original Sample Size"
 	label values order measures
 	order order
@@ -495,13 +495,84 @@ preserve
 	outsheet using "../tables/tab-s5.csv", replace noquote comma
 restore
 
-// Fig S1. Comparison of original and replication effect sizes
-preserve
-	collapse result eorig erep, by(study)
-	outsheet using "../graphs/fig-s1.csv", replace noquote comma
+// Fig S1a. Replication results 95% confidence intervals of normalized standardized replication
+// effectsizes (correlation coefficient r).
+preserve 
+	collapse ref eorig erep erepl95 erepu95, by(study)
+	sort ref
+	gen order = 19-_n
+	gen errorl = abs(erepl95-erep)
+	gen erroru = abs(erep-erepu95)
+	// Update labels:
+	forval s=1/18{
+		local name: label study `s'
+		qui sum ref if study==`s'
+		local ref = r(mean)
+		local newname = subinstr(subinstr("`name'", " (", ", ", .), ")", "", .) + " (`ref')"
+		label define study `s' "`newname'", modify
+	}
+	drop erep??? ref
+	outsheet using "../graphs/fig-s1a.csv", replace noquote delimiter(";")
 restore
 
-// Fig S3. Final positions per participant and market.
+// Fig S1b. Normalized meta-analytic estimates of effect sizes combining the original and replication studies. 
+// 95% confidence intervals of standardized effect sizes (correlation coefficient r).
+preserve 
+	collapse ref eorig emeta emetal95 emetau95, by(study)
+	drop if emetal95==.
+	sort ref
+	gen order = 19-_n
+	gen errorl = abs(emeta-emetal95)
+	gen erroru = abs(emetau95-emeta)
+	// Update labels:
+	forval s=1/18{
+		local name: label study `s'
+		qui sum ref if study==`s'
+		local ref = r(mean)
+		local newname = subinstr(subinstr("`name'", " (", ", ", .), ")", "", .) + " (`ref')"
+		label define study `s' "`newname'", modify
+	}
+	drop emeta?95 ref
+	outsheet using "../graphs/fig-s1b.csv", replace noquote delimiter(";")
+restore
+
+// Fig S2. Replication effect size within 95% prediction interval of original
+preserve
+	collapse ref eorigpredl95 eorigpredu95 erep eorig, by(study)
+	
+	gen type = .
+	replace type = 0 if erep < eorigpredl95
+	replace type = 1 if erep >= eorigpredl95 & erep <= eorigpredu95
+	replace type = 2 if erep > eorigpredu95
+	
+	sort ref
+	gen order = 19-_n
+	gen errorl = abs(eorigpredl95-eorig)
+	gen erroru = abs(eorig-eorigpredu95)
+	
+	// Replace Kuziemko et al. original effect size to
+	// increase figure legibility:
+	replace eorig = eorig + 0.0025 if study==17
+	
+	// Update labels:
+	forval s=1/18{
+		local name: label study `s'
+		qui sum ref if study==`s'
+		local ref = r(mean)
+		local newname = subinstr(subinstr("`name'", " (", ", ", .), ")", "", .) + " (`ref')"
+		label define study `s' "`newname'", modify
+	}
+	drop eorigpred?95 ref
+	outsheet using "../graphs/fig-s2.csv", replace noquote delimiter(";")
+restore
+
+// Fig S3. Comparison of original and replication effect sizes
+preserve
+	collapse result eorig erep, by(study)
+	outsheet using "../graphs/fig-s3.csv", replace noquote comma
+restore
+
+// Fig S5. Final positions per participant and market.
 preserve
 	keep if active==1
 	collapse ref finalholdings, by(study userid)
@@ -527,5 +598,24 @@ preserve
 	}
 	
 	keep ref tempid holdingtype
-	outsheet using "../graphs/fig-s3.csv", replace noquote comma nolab
+	outsheet using "../graphs/fig-s5.csv", replace noquote comma nolab
+restore
+
+
+// Fig S6. Survey responses and prediction market prices agains relative effect size
+preserve
+	keep if active==1
+	collapse endprice preqrep erel, by(study)
+	
+	reg endprice erel
+	mat def b=e(b)'
+	mat colnames b=endpricefit
+	svmat b, names(col)
+	
+	reg preqrep erel
+	mat def b=e(b)'
+	mat colnames b=preqrepfit
+	svmat b, names(col)
+	
+	outsheet using "../graphs/fig-s6.csv", replace noquote comma
 restore

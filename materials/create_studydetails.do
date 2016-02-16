@@ -34,7 +34,7 @@ drop sortorder
 
 gen ref = .
 label var ref "Reference number in paper"
-replace ref = _n + 33
+replace ref = _n + 32
 
 gen pubdate = .
 format pubdate %td
@@ -407,6 +407,10 @@ gen eorigu90 = .
 label var eorigu90 "Upper bound of 90% interval around original effect size (r)"
 gen e33orig = .
 label var e33orig "Effect size (r) that the original study had 33% power to detect"
+gen eorigpredl95 = .
+label var eorigpredl95 "Lower bound of 95% prediction interval around original effect size (3)"
+gen eorigpredu95 = .
+label var eorigpredu95 "Upper bound of 95% prediction interval around original effect size (3)"
 gen erep = .
 label var erep "Effect size of replication study"
 gen erepl95 = .
@@ -435,6 +439,8 @@ replace eorigu90 = 0.324767394327 if study==1
 replace eorigl95 = 0.00370194653852 if study==1
 replace eorigu95 = 0.350575225459 if study==1
 replace e33orig = 0.139907836986 if study==1
+replace eorigpredl95 = -0.0272907536259 if study==1
+replace eorigpredu95 = 0.377463960166 if study==1
 
 replace erep = 0.0790703532018 if study==1
 replace erepl90 = -0.0134404334126 if study==1
@@ -455,6 +461,8 @@ replace eorigu90 = 0.533669229543 if study==2
 replace eorigl95 = -0.00554130733746 if study==2
 replace eorigu95 = 0.570173555797 if study==2
 replace e33orig = 0.246879577687 if study==2
+replace eorigpredl95 = -0.0527610839878 if study==2
+replace eorigpredu95 = 0.601215599148 if study==2
 
 replace erep = 0.229536356959 if study==2
 replace erepl90 = 0.0808026096829 if study==2
@@ -475,6 +483,8 @@ replace eorigu90 = 0.896798147173 if study==3
 replace eorigl95 = 0.248686284485 if study==3
 replace eorigu95 = 0.915526451471 if study==3
 replace e33orig = 0.455749511728 if study==3
+replace eorigpredl95 = 0.0990490082383 if study==3
+replace eorigpredu95 = 0.937293596276 if study==3
 
 replace erep = 0.657411288278 if study==3
 replace erepl90 = 0.370761073921 if study==3
@@ -495,6 +505,8 @@ replace eorigu90 = 0.58151640702 if study==4
 replace eorigl95 = 0.0944963689171 if study==4
 replace eorigu95 = 0.613537176605 if study==4
 replace e33orig = 0.234916687065 if study==4
+replace eorigpredl95 = 0.00719009094293 if study==4
+replace eorigpredu95 = 0.665244342552 if study==4
 
 replace erep = 0.363002684809 if study==4
 replace erepl90 = 0.169783142539 if study==4
@@ -515,6 +527,8 @@ replace eorigu90 = 0.9747363985 if study==5
 replace eorigl95 = 0.0978561808619 if study==5
 replace eorigu95 = 0.982374145079 if study==5
 replace e33orig = 0.672241210903 if study==5
+replace eorigpredl95 = -0.0468105691004 if study==5
+replace eorigpredu95 = 0.986782287784 if study==5
 
 replace erep = 0.170189166838 if study==5
 replace erepl90 = -0.313191913476 if study==5
@@ -535,6 +549,8 @@ replace eorigu90 = 0.175126698779 if study==6
 replace eorigl95 = 0.0484149726004 if study==6
 replace eorigu95 = 0.185992845393 if study==6
 replace e33orig = 0.0544052124915 if study==6
+replace eorigpredl95 = 0.0191940021317 if study==6
+replace eorigpredu95 = 0.214076431131 if study==6
 
 replace erep = 0.266538269195 if study==6
 replace erepl90 = 0.210911257969 if study==6
@@ -555,6 +571,8 @@ replace eorigu90 = 0.931724504855 if study==7
 replace eorigl95 = 0.197037122338 if study==7
 replace eorigu95 = 0.946801042792 if study==7
 replace e33orig = 0.533325195306 if study==7
+replace eorigpredl95 = 0.03245213037 if study==7
+replace eorigpredu95 = 0.961630679616 if study==7
 
 replace erep = -0.11596300548 if study==7
 replace erepl90 = -0.517330150897 if study==7
@@ -575,6 +593,8 @@ replace eorigu90 = 0.861869971391 if study==8
 replace eorigl95 = 0.422644203566 if study==8
 replace eorigu95 = 0.879791181565 if study==8
 replace e33orig = 0.339256286653 if study==8
+replace eorigpredl95 = 0.196889679422 if study==8
+replace eorigpredu95 = 0.925526400522 if study==8
 
 replace erep = 0.731605727911 if study==8
 replace erepl90 = 0.443013025107 if study==8
@@ -595,6 +615,8 @@ replace eorigu90 = 0.667031229166 if study==9
 replace eorigl95 = 0.111166624409 if study==9
 replace eorigu95 = 0.699345564948 if study==9
 replace e33orig = 0.282279968305 if study==9
+replace eorigpredl95 = 0.0173274376059 if study==9
+replace eorigpredu95 = 0.744418358991 if study==9
 
 replace erep = 0.311199311719 if study==9
 replace erepl90 = 0.0842583537452 if study==9
@@ -615,6 +637,8 @@ replace eorigu90 = 0.740914806202 if study==10
 replace eorigl95 = 0.490148706897 if study==10
 replace eorigu95 = 0.756888765576 if study==10
 replace e33orig = 0.173797607487 if study==10
+replace eorigpredl95 = 0.352957942802 if study==10
+replace eorigpredu95 = 0.819839510335 if study==10
 
 replace erep = 0.437953607707 if study==10
 replace erepl90 = 0.196686799056 if study==10
@@ -635,6 +659,8 @@ replace eorigu90 = 0.432663112699 if study==11
 replace eorigl95 = 0.134635358447 if study==11
 replace eorigu95 = 0.455655714035 if study==11
 replace e33orig = 0.137622833324 if study==11
+replace eorigpredl95 = 0.0635919098039 if study==11
+replace eorigpredu95 = 0.510639819163 if study==11
 
 replace erep = 0.326573539422 if study==11
 replace erepl90 = 0.189547461878 if study==11
@@ -655,6 +681,8 @@ replace eorigu90 = 0.940584864142 if study==12
 replace eorigl95 = 0.49411650002 if study==12
 replace eorigu95 = 0.951569964509 if study==12
 replace e33orig = 0.455749511728 if study==12
+replace eorigpredl95 = 0.331859014173 if study==12
+replace eorigpredu95 = 0.96705396689 if study==12
 
 replace erep = 0.367593525514 if study==12
 replace erepl90 = -0.0704456455184 if study==12
@@ -675,6 +703,8 @@ replace eorigu90 = 0.471313577258 if study==13
 replace eorigl95 = 0.0256785402943 if study==13
 replace eorigu95 = 0.503696603733 if study==13
 replace e33orig = 0.201850891173 if study==13
+replace eorigpredl95 = -0.0260286060229 if study==13
+replace eorigpredu95 = 0.541281117546 if study==13
 
 replace erep = -0.00701629144787 if study==13
 replace erepl90 = -0.151233238817 if study==13
@@ -695,6 +725,8 @@ replace eorigu90 = 0.557042747679 if study==14
 replace eorigl95 = 0.392713421968 if study==14
 replace eorigu95 = 0.569782483622 if study==14
 replace e33orig = 0.0901718140468 if study==14
+replace eorigpredl95 = 0.213377133478 if study==14
+replace eorigpredu95 = 0.688710195628 if study==14
 
 replace erep = 0.34463841128 if study==14
 replace erepl90 = 0.113653161105 if study==14
@@ -715,6 +747,8 @@ replace eorigu90 = 0.873805513808 if study==15
 replace eorigl95 = 0.146288197065 if study==15
 replace eorigu95 = 0.896478626228 if study==15
 replace e33orig = 0.455749511728 if study==15
+replace eorigpredl95 = 0.007564510622 if study==15
+replace eorigpredu95 = 0.92072516592 if study==15
 
 replace erep = 0.533556821497 if study==15
 replace erepl90 = 0.214371652574 if study==15
@@ -735,6 +769,8 @@ replace eorigu90 = 0.435989422561 if study==16
 replace eorigl95 = 0.177666819618 if study==16
 replace eorigu95 = 0.456132456597 if study==16
 replace e33orig = 0.121082305984 if study==16
+replace eorigpredl95 = 0.0913813442428 if study==16
+replace eorigpredu95 = 0.522921346265 if study==16
 
 replace erep = 0.304223231247 if study==16
 replace erepl90 = 0.155350472452 if study==16
@@ -755,6 +791,8 @@ replace eorigu90 = 0.503157675785 if study==17
 replace eorigl95 = -0.0237030628806 if study==17
 replace eorigu95 = 0.539877947143 if study==17
 replace e33orig = 0.237747192435 if study==17
+replace eorigpredl95 = -0.0643760006837 if study==17
+replace eorigpredu95 = 0.568118981736 if study==17
 
 replace erep = -0.119848901099 if study==17
 replace erepl90 = -0.253312598322 if study==17
@@ -775,6 +813,8 @@ replace eorigu90 = 0.362619745072 if study==18
 replace eorigl95 = 0.0212030554828 if study==18
 replace eorigu95 = 0.389536617642 if study==18
 replace e33orig = 0.150352478097 if study==18
+replace eorigpredl95 = -0.0155309085093 if study==18
+replace eorigpredu95 = 0.42024705926 if study==18
 
 replace erep = 0.122871403263 if study==18
 replace erepl90 = 0.0184074881441 if study==18

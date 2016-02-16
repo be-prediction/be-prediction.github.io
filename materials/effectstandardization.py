@@ -9,6 +9,8 @@ Relevant references are:
 [4] Rosenberg, M. S., & Plaistow, S. (2010). A generalized formula for converting chi-square tests to effect sizes for meta-analysis. PloS One, 5(4). Retrieved from http://dx.plos.org/10.1371/journal.pone.0010059
 [5] Viechtbauer, W., & others. (2010). Conducting meta-analyses in R with the metafor package. Journal of Statistical Software, 36(3), 1-48.
 [6] Fisher transformation. (2015, November 23). In Wikipedia, the free encyclopedia. Retrieved from https://en.wikipedia.org/w/index.php?title=Fisher_transformation&oldid=691927443
+[7] Leek, J. T., Patil, P., & Peng, R. D. (2015). A glass half full interpretation of the replicability of psychological science. arXiv Preprint arXiv:1509.08968. Retrieved from http://arxiv.org/abs/1509.08968
+
 
 """
 
@@ -19,12 +21,14 @@ import sys
 sys.path.insert(0, '/Users/es.3386/Google Drive/Doktorand/Behavioral pred. markets/Effect standardization')
 from pwr_r_test import *
 
+
 class Study(object):
     def __init__(self, name, original=None, replication=None, meta=None):
         self.name = name
         self.original = original
         self.replication = replication
         self.meta = meta
+        self.predinterval95 = rpredint(self.original.getr(), self.original.getN(), self.replication.getN(), 0.95)
 
     def setoriginal(self, original):
         self.original = original
@@ -43,6 +47,9 @@ class Study(object):
 
     def getmeta(self):
         return self.meta
+
+    def getpredinterval95(self):
+        return self.predinterval95
 
     def __str__(self):
         return self.name + \
@@ -244,6 +251,21 @@ def rconfint(stat, samplesize, width):
     rinterval.append(fisherztor(zupper))
     return rinterval
 
+def rpredint(stat, origsamplesize, repsamplesize, width):
+    """ Confidence interval around r using the Fisher transformation.
+        Expects inputs as floats.
+        See reference 7. """
+    probability = 1-(1-width)/2
+    zstat = rtofisherz(stat)
+    zvarorig = 1/(origsamplesize-3)
+    zvarrep = 1/(repsamplesize-3)
+    zlower = zstat - norm.ppf(probability) * math.sqrt(zvarorig+zvarrep)
+    zupper = zstat + norm.ppf(probability) * math.sqrt(zvarorig+zvarrep)
+    predinterval = []
+    predinterval.append(fisherztor(zlower))
+    predinterval.append(fisherztor(zupper))
+    return predinterval
+
 def pvalue(stat, samplesize):
     """ P-value for r using the Fisher transformation.
         Expects inputs as floats.
@@ -278,6 +300,10 @@ def stataformatstudies(studies):
         if type == "orig":
             print "gen e33orig = ."
             print "label var e33orig \"Effect size (r) that the original study had 33% power to detect\""
+            print "gen eorigpredl95 = ."
+            print "label var eorigpredl95 \"Lower bound of 95% prediction interval around original effect size (3)\""
+            print "gen eorigpredu95 = ."
+            print "label var eorigpredu95 \"Upper bound of 95% prediction interval around original effect size (3)\""
     print ""
     i = 0
     for study in studies:
@@ -333,6 +359,12 @@ def stataformatstudy(study, number):
             if effect[1]=='orig':
                 print "replace e33orig = " + \
                 str(effect[0].gete33()) + \
+                " if study==" + str(number)
+                print "replace eorigpredl95 = " + \
+                str(sign * study.getpredinterval95()[lowernum]) + \
+                " if study==" + str(number)
+                print "replace eorigpredu95 = " + \
+                str(sign * study.getpredinterval95()[uppernum]) + \
                 " if study==" + str(number)
             print ""
 
