@@ -1,6 +1,6 @@
 from scipy.stats import t, norm
 import sys
-sys.path.insert(0, '/Users/es.3386/Google Drive/Doktorand/Behavioral pred. markets/Effect standardization')
+sys.path.insert(0, '') # Enter path here
 from effectstandardization import *
 
 STUDIES = [None for x in range(19)]

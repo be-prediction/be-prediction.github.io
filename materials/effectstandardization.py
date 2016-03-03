@@ -18,7 +18,7 @@ import math
 from scipy.stats import norm
 import numpy
 import sys
-sys.path.insert(0, '/Users/es.3386/Google Drive/Doktorand/Behavioral pred. markets/Effect standardization')
+sys.path.insert(0, '') # Enter path here
 from pwr_r_test import *
 
 
