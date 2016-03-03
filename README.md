@@ -1,2 +1,2 @@
-# http://experimentaleconreplications.com
+# Experimentaleconreplications.com
 
