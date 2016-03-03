@@ -5,6 +5,7 @@ tld_[1] = "sg";
 tld_[2] = "net";
 tld_[3] = "se";
 tld_[4] = "edu";
+tld_[5] = "au";
 tld_[10] = "ac.nz";
 tld_[11] = "ac.at";
 tld_[12] = "gov.uk";

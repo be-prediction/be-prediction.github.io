@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>Experimental Economics Replication Project</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">EE-RP</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li class="active" id="replicationreports"><a href="/replicationreports.html">Replication Reports</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Participant materials</li>
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Surveys</li>
+                                <li><a href="/pre-market-survey.html">Pre-market survey</a></li>
+                                <li><a href="/post-market-survey.html">Post-market survey</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Data and code</li>
+                                <li><a href="/scripts.html">Scripts</a></li>
+                                <li><a download href="/materials/marketdata.zip">Market data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="smalljumbo">Replication reports</h1>
+                <div class="col-md-6">
+                   These are the final replication reports for the 18 studies that were replicated. Some studies also have a brief comment from the original authors.
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Row 01 -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Abeler et al. (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Abeler, Johannes, Armin Falk, Lorenz Goette, and David Huffman. 2011. &ldquo;Reference Points and Effort Provision.&rdquo; American Economic Review, 101(2): 470-92
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.2.470" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Abeler et al. 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Abeler et al. 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#abelercomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="abelercomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Ambrus and Greiner (AER 2012)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Ambrus, Attila, and Ben Greiner. 2012. &ldquo;Imperfect Public Monitoring with Costly Punishment: An Experimental Study.&rdquo; American Economic Review, 102(7): 3317-32
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.102.7.3317" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Ambrus & Greiner 2012.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Ambrus & Greiner 2012 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#ambruscomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="ambruscomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Bartling et al. (AER 2012)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Bartling, Björn, Ernst Fehr, and Klaus M. Schmidt. 2012. &ldquo;Screening, Competition, and Job Design: Economic Origins of Good Jobs.&rdquo; American Economic Review, 102(2): 834-64
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.102.2.834" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Bartling et al. 2012.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Bartling et al. 2012 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#bartlingcomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="bartlingcomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Charness and Dufwenberg  (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Charness, Gary, and Martin Dufwenberg. 2011. &ldquo;Participation.&rdquo; American Economic Review, 101(4): 1211-37
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.4.1211" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Charness & Dufwenberg 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Charness & Dufwenberg 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#charnesscomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="charnesscomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Chen and Chen  (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Chen, Roy, and Yan Chen. 2011. &ldquo;The Potential of Social Identity for Equilibrium Selection.&rdquo; American Economic Review, 101(6): 2562-89
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.6.2562" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Chen & Chen 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Chen & Chen 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#chencomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="chencomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                de Clippel et al. (AER 2014)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        de Clippel, Geoffroy, Kfir Eliaz, and Brian Knight. 2014. &ldquo;On the Selection of Arbitrators.&rdquo; American Economic Review, 104(11): 3434-58
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.104.11.3434" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/de Clippel et al. 2014.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/de Clippel et al. 2014 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#clippelcomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="clippelcomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Duffy and Puzzello (AER 2014)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Duffy, John, and Daniela Puzzello. 2014. &ldquo;Gift Exchange versus Monetary Exchange: Theory and Evidence.&rdquo; American Economic Review, 104(6): 1735-76
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.104.6.1735" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Duffy & Puzzello 2014.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Duffy & Puzzello 2014 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#duffycomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="duffycomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Dulleck et al. (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Dulleck, Uwe, Rudolf Kerschbamer, and Matthias Sutter. 2011. &ldquo;The Economics of Credence Goods: An Experiment on the Role of Liability, Verifiability, Reputation, and Competition.&rdquo; American Economic Review, 101(2): 526-55
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.2.526" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Dulleck et al. 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Dulleck et al. 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#dulleckcomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="dulleckcomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Ericson and Fuster (QJE 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Marzilli Ericson, Keith M., and Andreas Fuster. 2011. &ldquo;Expectations as Endowments: Evidence on Reference-Dependent Preferences from Exchange and Valuation Experiments.&rdquo; The Quarterly Journal of Economics, 126(4): 1879-1907
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="http://qje.oxfordjournals.org/content/126/4/1879" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Ericson & Fuster 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Ericson & Fuster 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#ericsoncomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="ericsoncomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Fehr et al. (AER 2013)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Fehr, Ernst, Holger Herz, and Tom Wilkening. 2013. &ldquo;The Lure of Authority: Motivation and Incentive Effects of Power.&rdquo; American Economic Review, 103(4): 1325-59
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.103.4.1325" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Fehr et al. 2013.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Fehr et al. 2013 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#fehrcomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="fehrcomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Friedman and Oprea (AER 2012)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Friedman, Daniel, and Ryan Oprea. 2012. &ldquo;A Continuous Dilemma.&rdquo; American Economic Review, 102(1): 337-63
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.102.1.337" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Friedman & Oprea 2012.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Friedman & Oprea 2012 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#friedmancomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="friedmancomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Fudenberg et al. (AER 2012)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Fudenberg, Drew, David G. Rand, and Anna Dreber. 2012. &ldquo;Slow to Anger and Fast to Forgive: Cooperation in an Uncertain World.&rdquo; American Economic Review, 102(2): 720-49
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.102.2.720" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Fudenberg et al. 2012.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Fudenberg et al. 2012 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#fudenbergcomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="fudenbergcomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Huck et al. (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Huck, Steffen, Andrew J. Seltzer, and Brian Wallace. 2011. &ldquo;Deferred Compensation in Multiperiod Labor Contracts: An Experimental Test of Lazear's Model.&rdquo; American Economic Review, 101(2): 819-43
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.2.819" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Huck et al. 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Huck et al. 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#huckcomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="huckcomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Ifcher and Zarghamee (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Ifcher, John, and Homa Zarghamee. 2011. &ldquo;Happiness and Time Preference: The Effect of Positive Affect in a Random-Assignment Experiment.&rdquo; American Economic Review, 101(7): 3109-29
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.7.3109" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Ifcher & Zarghamee 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Ifcher & Zarghamee 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#ifchercomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="ifchercomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Kessler and Roth (AER 2012)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Kessler, Judd B., and Alvin E. Roth. 2012. &ldquo;Organ Allocation Policy and the Decision to Donate.&rdquo; American Economic Review, 102(5): 2018-47
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.102.5.2018" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Kessler & Roth 2012.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Kessler & Roth 2012 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#kesslercomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="kesslercomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Kirchler et al (AER 2012)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Kirchler, Michael, Jürgen Huber, and Thomas Stöckl. 2012. &ldquo;Thar She Bursts: Reducing Confusion Reduces Bubbles.&rdquo; American Economic Review, 102(2): 865-83
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.102.2.865" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Kirchler et al. 2012.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Kirchler et al. 2012 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#kirchlercomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="kirchlercomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Kogan et al. (AER 2011)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Kogan, Shimon, Anthony M. Kwasnica, and Roberto A. Weber. 2011. &ldquo;Coordination in the Presence of Asset Markets.&rdquo; American Economic Review, 101(2): 927-47
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="https://www.aeaweb.org/articles.php?doi=10.1257/aer.101.2.927" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Kogan et al. 2011.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Kogan et al. 2011 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#kogancomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="kogancomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Kuziemko et al. (QJE 2014)
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Kuziemko, Ilyana, Ryan W. Buell, Taly Reich and Michael I. Norton. 2014. &ldquo;Last-Place Aversion: Evidence and Redistributive Implications.&rdquo; The Quarterly Journal of Economics, 129(1): 105-149
+                                    </p>
+                                </div>
+                                <div class="col-xs-3 col-sm-12 replication-buttons">
+                                    <a href="http://qje.oxfordjournals.org/content/129/1/105" target="_blank" class="nav-link"><button type="button" class="btn btn-default btn-xs">Original paper <i class="fa fa-external-link"></i></button></a>
+
+                                    <a href="/finalreports/Kuziemko et al. 2014.pdf" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Replication report <i class="fa fa-file-pdf-o"></i></button></a>
+
+                                    <a download href="/materials/Kuziemko et al. 2014 - Data.zip" class="nav-link" target="_blank"><button type="button" class="btn btn-default btn-xs">Data <i class="fa fa-file-archive-o"></i></button></a>
+
+                                    <button type="button" class="btn btn-default btn-xs" onclick="openInfo('#kuziemkocomment')">Author comment <i class="fa fa-comment-o"></i></button>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div role="alert">
+                                        <div id="kuziemkocomment" class="well" style="display:none;margin-bottom: 0;">
+                                            <button type="button" class="close" style="color:black;"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h6>Author comment:</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p><i class="fa fa-copyright"></i> <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $('.btn').click(function() { this.blur() })
+        </script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/convert.js"></script>
+        <script type="text/javascript" src="/js/infobox.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

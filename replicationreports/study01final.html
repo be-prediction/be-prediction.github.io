@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>Experimental Economics Replication Project</title>
+
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="/stylesheets/market.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">EE-RP</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li id="replicationreports"><a href="/replicationreports.html">Replication Reports</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Participant materials</li>
+                                <li><a href="/repoverview.html">Project overview</a></li>
+                                <li><a href="/repdetails.html">Project details</a></li>
+                                <li id="studies"><a href="/studies.html">Included studies</a></li>
+                                <li><a href="/instructions.html">Trading instructions</a></li>
+                                <li><a href="/calculator.html">Market calculator</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Surveys</li>
+                                <li><a href="/pre-market-survey.html">Pre-market survey</a></li>
+                                <li><a href="/post-market-survey.html">Post-market survey</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Data and code</li>
+                                <li><a href="/scripts.html">Scripts</a></li>
+                                <li><a download href="/materials/marketdata.zip">Market data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="/people.html">People</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+
+            <div class="row rep-top">
+                <div class="col-md-8 col-lg-6">
+                    <div style="float:left">
+                        <a href="/studies.html" class="nav-link"><h5><i class="fa fa-arrow-left"></i> Back</h5></a>
+                    </div>
+                    <div style="float:right">
+                        <a href="Study%2001%20-%20Abeler%20et%20al%20(2011)%20Final.pdf" class="nav-link" download><button type="button" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Download .pdf</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center">
+                        <p>Replication of<br>
+                            <strong>Reference points and effort provision</strong><br>
+                            Abeler, J. / Falk, A. / Goette, L. / Huffman, D. (2011)<br>
+                            American Economic Review, 101(2), 470-492</p>
+                        <p>
+                            Replication Authors:<br>
+                            Felix Holzmeister, Jürgen Huber, Michael Kirchler and Michael Razen</p>
+                    </div>
+                    <div class="text-justify">
+                        <p class="rep-ingress">Abeler et al. find that in a real effort task, effort provision and earnings are higher if the expectations-based reference point is high (HI treatment) compared to low (LO treatment).</p>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading rep-panel-heading"><h6 class="rep-h6">Hypothesis to bet on:</h6></div>
+                            <div class="panel-body rep-panel-body">
+                                Subjects exert more effort (leading to higher earnings) in a real effort task if the expectations-based reference point is increased (a comparison of the average accumulated earnings in the real effort task between the LO treatment and the HI treatment).
+                            </div>
+                        </div>
+
+                        <p class="rep-h3">Power Analysis</p>
+                        <p>The original p-value is reported as p&lt;0.05; we re-estimated the regression based on the posted data to get the exact p-value which is 0.046 based on a t-test of the coefficient (regression coefficient for &ldquo;1 if HI treatment&rdquo; dummy variable in the first regression in Table 1, an OLS model with the accumulated earnings in the real effort task as the dependent variable, p.478): &ldquo;The treatment difference in effort provision is significant in an OLS regression where we compare effort in HI to effort in LO. We regress the accumulated earnings at which a subject stopped on a treatment dummy (see Table 1, column 1).&rdquo;</p>
+                        <p>The original sample size is 120 participants (60 in treatment T1 and 60 in treatment T2). To achieve 90% power the required sample size is 317 participants.</p>
+
+                        <p class="rep-h3">Sample</p>
+                        <p>The sample for replication consists of 318 students at the University of Innsbruck in Austria, 159 subjects per each of the two treatments. As in the original study, we will exclude students with economics as a major and solely recruit subjects who had participated in no or only a few previous experiments.</p>
+
+                        <p class="rep-h3">Materials</p>
+                        <p>We use the material of the original experiment (programmed in z-Tree) along with the original German instructions. The program is available on the journal’s webpage, while the German instructions have been kindly provided by the authors.</p>
+
+                        <p class="rep-h3">Procedure</p>
+                        <p>We follow the procedure of the original article, with only slight but unavoidable deviations as outlined below. The following summary of the experimental procedure is therefore based on the section &ldquo;I. Design&rdquo; (pp. 473–475) in the original study.</p>
+                        <p>The work task in this experiment consists of counting the number of zeros in tables containing randomly ordered zeros and ones. The experiment involves two stages. Prior to the first stage, subjects read the instructions (for the first stage only) and answer control questions. During the first stage, subjects have four minutes to count as many tables as possible. Thereby, the first stage serves to familiarize subjects with the task, permitting subjects to have a good understanding of how difficult the task is and how much they could earn in a given time before they know about the amount of the fixed payment (which is revealed only prior to the second stage).</p>
+                        <p>After the first stage, subjects read the instructions for the second (and main) stage. Contrary to the first stage, subjects now can decide themselves how much and for how long they want to work. As soon as they push the &ldquo;stop&rdquo;-button on the screen, they get immediately paid and can leave. We employ the same procedure as in the original study and let subjects arrive for the experiment one at a time. Individual starting times are at least 20 minutes apart. Upon arrival, subjects are guided to one of three essentially identical, neutral rooms. Instructions and payments are also administered in their rooms.</p>
+                        <p>Moreover, subjects do not earn their accumulated piece rate from the second stage for sure as they either receive a fixed rate or the accumulated piece rate earnings with equal probability. Which payment subjects receive is determined only after they have decided when to stop working. The two treatments HI and LOW only differ in the amount of the fixed payment (€7 in the HI treatment, €3 in the LOW treatment) which determines the rational expectation-based references. Subjects are randomly assigned to one of the two treatments.</p>
+                        <p>After completing both stages, subjects will be privately paid in cash based on the same incentives and using the same show-up fee (€5) as in the original study (average earnings were €8.70 per subject in the original study).</p>
+
+                        <p class="rep-h3">Analysis Plan</p>
+                        <p>The analysis will be performed exactly as in the original article. That is, differences in effort provision between the two treatments HI and LO are estimated by an OLS regression with the accumulated earnings at which a subject stopped as the dependent and a treatment dummy as independent variable.</p>
+
+                        <p class="rep-h3">Differences from Original Study</p>
+                        <p>The replication procedure is identical to that of the original study, with the only unavoidable deviation that the replication will be performed at the University of Innsbruck, Austria, in 2015, on students from the University of Innsbruck, whereas the original data was gathered at the University of Bonn, Germany, in 2007, on students from the University of Bonn. However, as in the original study, only subjects who did not have economics as a major and who had participated in no or only a few previous experiments are invited. The experiment will be conducted in German as in the original study.</p>
+                        <p>While the original study also looked at several control treatments, the focus of the replication is only on the earnings difference between the HI and the LO treatment.</p>
+
+                        <!--- Added after replication finished: -->
+
+                        <p class="rep-h3">Replication Results</p>
+                        <p>In the replication experiment, the average accumulated earnings in the real effort task are 7.01 in the HI- and 6.34 in the LO treatment (average accumulated earnings were 9.22 (HI) and 7.37 (LO) in the original study). Estimating the difference in effort provision between the two treatments with an ordinary least squares regression with the accumulated earnings at which a subject stopped as the dependent variable and a treatment dummy as independent variable yields a coefficient of 0.667 with a corresponding p-value of 0.160 (see Table 1). Accordingly, the null hypothesis of no difference in effort provision given a higher expectation-based reference point cannot be rejected. For the original study, the coefficient of the treatment dummy is 1.850 such that the relative effect size of the replication experiment equals 36.04% (0.667/1.850).</p>
+
+                        <p>The first 96 observations of the replication experiments were conducted before the summer break in June and July 2015. The remaining 222 observations were gathered in September and October 2015. Since the weather was very hot and sunny in Austria this summer, we compare the two samples to rule out any concerns about implications of temperature differences. Neither regressing the average accumulated earnings in the real effort task on the treatment dummy only for the 96 observations gathered in June/July (coef.=−0.275, p=0.760) nor the 222 observations gathered in September/October (coef.=1.074, p=0.053) results in an successful replication. Similarly, controlling for the room temperature does not change the replication results, neither in the entire sample (coef.=−0.204, p=0.362) nor in one of the subsamples (June/Juli: coef.=0.060, p=0.851; September/October: coef.=−0.225, p=0.533), although the average room temperature was 0.77&deg;C higher in June/July (p&lt;0.001). Additionally including an interaction term “temperature x treatment” shows that the treatment effect does not vary with the room temperature significantly (coef.=−0.504, p=0.259). Similarly, including a dummy variable for the observations gathered in September/October (coef.=0.436, p=0.548) and an interaction term &ldquo;treatment &times; Sept/Oct&rdquo; (coef.=1.349, p=0.189) depicts that the treatment effect does not significantly vary between the experiments conducted in June/July and September/October.</p>
+
+                        <p class="rep-h3">Unplanned Protocol Deviations</p>
+                        <p>The replication experiments were conducted exactly in the way as described above without any deviations from the protocol.</p>
+
+                        <p class="rep-h3">Discussion</p>
+                        <p>Given the criteria and procedure outlined above, the hypothesis of interest has not been replicated at a significance level of α&lt;5%. The relative effect size equals 36.04% and the p-value of the hypothesis test is 0.160.</p>
+
+                        <table class="table latextable">
+                            <thead class="caption">
+                              <tr>
+                                  <th colspan="3"><strong>Table 1:</strong> Treatment difference in effort provision (HI compared to LO treatment) in the original and replication experiments</th>
+                              </tr>
+                              <tr>
+                                <th></th>
+                                <th>Original study</th>
+                                <th>Replication study</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1 if HI treatment</td>
+                                <td><strong>1.850<sup>**</sup></strong><br>(0.917)</td>
+                                <td><strong>0.667</strong><br>(0.474)</td>
+                              </tr>
+                              <tr>
+                                <td>Constant</td>
+                                <td>7.370<sup>***</sup><br>(0.648)</td>
+                                <td>6.342<sup>***</sup><br>(0.335)</td>
+                              </tr>
+                              <tr class="separator">
+                                <td>Observations</td>
+                                <td>120</td>
+                                <td>318</td>
+                              </tr>
+                              <tr></tr>
+                                <td>Adjusted <em>R<sup>2</sup></em></td>
+                                <td>0.03</td>
+                                <td>0.00</td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <td colspan="3"><sup>***</sup> Significant at the 1 percent level</td>
+                              </tr>
+                              <tr>
+                                <td colspan="3"><sup>&nbsp;&nbsp;**</sup> Significant at the 5 percent level</td>
+                              </tr>
+                              <tr>
+                                <td colspan="3"><sup>&nbsp;&nbsp;&nbsp;&nbsp;*</sup> Significant at the 10 percent level</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <footer>
+                <p><i class="fa fa-copyright"></i> <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                    text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
+            </footer>
+        </div> <!-- /container -->
+
+        <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/jquery-1.11.1.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript" src="/js/jqmath-etc-0.4.2.min.js"></script>
+    </body>
+</html>

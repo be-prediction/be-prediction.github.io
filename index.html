@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
 
-        <title>BE-RP: Prediction Markets</title>
+        <title>Experimental Economics Replication Project</title>
 
 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="/stylesheets/market.css">
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/jqmath-0.4.0.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
     </head>
@@ -32,24 +33,29 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">BE-RP: Prediction markets</a>
+                    <a class="navbar-brand" href="/">EE-RP</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="home" class="active"><a href="/">Home</a></li>
+                        <li id="replicationreports"><a href="/replicationreports.html">Replication Reports</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Replication info<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
+                                <li role="presentation" class="dropdown-header">Participant materials</li>
                                 <li><a href="/repoverview.html">Project overview</a></li>
                                 <li><a href="/repdetails.html">Project details</a></li>
                                 <li id="studies"><a href="/studies.html">Included studies</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Market info<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
                                 <li><a href="/instructions.html">Trading instructions</a></li>
                                 <li><a href="/calculator.html">Market calculator</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Surveys</li>
+                                <li><a href="/pre-market-survey.html">Pre-market survey</a></li>
+                                <li><a href="/post-market-survey.html">Post-market survey</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li role="presentation" class="dropdown-header">Data and code</li>
+                                <li><a href="/scripts.html">Scripts</a></li>
+                                <li><a download href="/materials/marketdata.zip">Market data <i class="fa fa-download" style="font-size: 75%;padding-bottom: 5px;display: inline-table;vertical-align: bottom;"></i></a></li>
                             </ul>
                         </li>
                         <li id="people"><a href="/people.html">People</a></li>
@@ -61,58 +67,27 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <h1>Behavioral Economics Replication Project</h1>
-                <p>Prediction markets have recently been established as popular forecasting tools. By organizing markets on research projects, we are exploring how such markets can contribute to the objectives of scientific research.</p>
-                <p><a class="btn btn-primary btn-lg" href="/repoverview.html" role="button">Learn more &raquo;</a></p>
+                <h1>Experimental Economics Replication Project</h1>
+                <p>In a systematic replication project of experimental studies published in high-impact economics journals 61% replicated.</p>
             </div>
         </div>
 
         <div class="container">
             <!-- Example row of columns -->
             <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <h2>Markets closed</h2>
-                    <p>Trading on the markets have now closed and the replication work has begun. Make sure to check back on this page for updates on the progress of the project.</p>
+                <div class="col-sm-6">
+                    <h2>Abstract</h2>
+                    <p>The reproducibility of scientific findings has been called into question. To contribute data about reproducibility in economics, we replicate 18 studies published in the <em>American Economic Review</em> and the <em>Quarterly Journal of Economics</em> in 2011-2014. All replications follow predefined analysis plans publicly posted prior to the replications, and have a statistical power of at least 90% to detect the original effect size at the 5% significance level. We find a significant effect in the same direction as the original study for 11 replications (61%); on average the replicated effect size is 66% of the original. The reproducibility rate varies between 67% and 78% for four additional reproducibility indicators, including a prediction market measure of peer beliefs.</p>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <h2>Project details</h2>
-                    <p>Learn everything there is to know about how the hypothesis were chosen and how the markets worked.</p>
-                    <p><a class="btn btn-default" href="/repdetails.html" role="button">View details &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Important dates</h2>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Event</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-decoration:line-through;">April 8, 8pm CET</td>
-                                <td style="text-decoration:line-through;">Deadline for signing up to participate.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-decoration:line-through;">April 20, 8pm CET</td>
-                                <td style="text-decoration:line-through;">Deadline for answering the pre-market survey.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-decoration:line-through;">April 22, 8pm CET</td>
-                                <td style="text-decoration:line-through;">Prediction markets open.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-decoration:line-through;">May 3, 8pm CET</td>
-                                <td style="text-decoration:line-through;">Prediction markets close.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="col-sm-6 col-md-4 col-md-offset-2">
+                    <h2>Project materials</h2>
+                    <p>All instructions, analysis scripts and additional information can be found under the Materials section.</p>
                 </div>
             </div>
             <hr>
 
             <footer>
-                <p>&copy; <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
+                <p><i class="fa fa-copyright"></i> <a href="mailto:predictionreplication@hhs.se" target="_blank" style="color: black;
                     text-decoration: none !important;">The Science Prediction Market Project</a>, 2015</p>
             </footer>
         </div> <!-- /container -->
